@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32.756886mm"
+   height="12.136634mm"
+   viewBox="0 0 32.756885 12.136634"
+   version="1.1"
+   id="svg1671"
+   inkscape:version="0.92.3 (unknown)"
+   sodipodi:docname="zenhub.svg">
+  <defs
+     id="defs1665" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="-13.20649"
+     inkscape:cy="41.592535"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1048"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     showborder="false">
+    <sodipodi:guide
+       position="-17.006306,30.429399"
+       orientation="1,0"
+       id="guide828"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata1668">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-87.133753,-137.47334)">
+    <g
+       id="g1648"
+       transform="matrix(0.15723618,0,0,0.26468466,72.792872,87.914321)"
+       style="stroke:none;stroke-opacity:1">
+      <rect
+         y="187.23798"
+         x="91.205986"
+         height="45.853184"
+         width="208.32918"
+         id="rect1755-5-1"
+         style="fill:none;fill-opacity:0;stroke:none;stroke-width:0.32100001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#5e60ba;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="100.39034"
+       y="145.20981"
+       id="text2609"><tspan
+         sodipodi:role="line"
+         id="tspan2607"
+         x="100.39034"
+         y="145.20981"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#5e60ba;fill-opacity:1;stroke-width:0.26458332">ZenHub</tspan></text>
+    <g
+       id="g826"
+       transform="matrix(0.06217278,0,0,0.06217278,87.667765,138.00834)"
+       style="fill:none;fill-rule:evenodd">
+      <path
+         id="path822"
+         d="M 0,0 V 176 H 176 V 0 H 0"
+         inkscape:connector-curvature="0"
+         style="fill:#5e60ba" />
+      <path
+         id="path824"
+         d="M 131.98,146.06 H 44.09 V 124.68 L 101.97,51.1 H 45.33 V 29.9 h 85.41 v 21.2 l -58.07,73.58 h 59.31 v 21.38"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+</svg>

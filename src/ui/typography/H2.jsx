@@ -15,15 +15,15 @@ const H2 = ({ children, classes }) => {
 }
 
 
-const styles = {
+const styles = theme => ({
   font: {
     fontSize: '2.25rem',
     marginBottom: '1rem',
     textAlign: 'center',
-    '@media screen and (max-width: 360px)': {
+    [theme.breakpoints.down('sm')]: {
       textAlign: 'left',
-    },
+    }
   }
-}
+})
 
 export default injectSheet(styles)(H2)

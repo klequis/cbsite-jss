@@ -7,23 +7,20 @@ const H4 = ({ children, classes }) => {
       // align='center'
       className={classes.font}
     >
-
       {children}
-
     </h4>
   )
 }
 
-
-const styles = {
+const styles = theme => ({
   font: {
     fontSize: '1.1rem',
     marginBottom: '1rem',
     textAlign: 'center',
-    '@media screen and (max-width: 360px)': {
+    [theme.breakpoints.down('sm')]: {
       textAlign: 'left',
-    },
+    }
   }
-}
+})
 
 export default injectSheet(styles)(H4)

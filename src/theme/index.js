@@ -1,23 +1,21 @@
+import createBreakpoints from 'ui/createBreakpoints'
+// const breakpoints = createBreakpoints(breakpointsInput)
+const breakpoints = createBreakpoints({})
+console.log('breakpoints', breakpoints.up)
 const theme = {
-  text: {
-    color: 'orange',
-    // eslint-disable-next-line
-    fontFamily: "'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif",
-    fontSize : 14,
+  breakpoints: {
+    keys: breakpoints.keys,
+    values: breakpoints.values,
+    up: breakpoints.up,
+    down: breakpoints.down,
+    between: breakpoints.between,
+    only: breakpoints.only,
   },
-  button: {
-    margin: {
-      horizontal: '0.2em',
-      vertical: '0em',
-    },
-    padding: {
-      horizontal: '1.5em',
-      vertical: '1.5em',
-    },
-    shadow: {
-      offset: '(0em / 2)'
-    }
-  },
+
+
+  spacing: {
+    unit: 8,
+  }
 }
 
 export default theme

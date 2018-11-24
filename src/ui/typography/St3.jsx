@@ -1,21 +1,28 @@
 import React from 'react'
 import injectSheet from 'react-jss'
 
-const H3 = ({ children, classes }) => {
+const St2 = ({ children, classes }) => {
   return (
-    <h3
-      // align={align ? align : 'left'}
+    <p
+      // variant='body1'
+      // align='center'
       className={classes.font}
     >
+
       {children}
-    </h3>
+
+    </p>
   )
 }
 
+
 const styles = theme => ({
   font: {
-    fontSize: '1.5rem',
-    marginBottom: '1rem',
+    fontSize: '1.1rem',
+    lineHeight: 1.65,
+    fontStyle: 'italic',
+    marginTop: '-0.65rem',
+    marginBottom: '1.5rem',
     textAlign: 'center',
     [theme.breakpoints.down('sm')]: {
       textAlign: 'left',
@@ -23,4 +30,4 @@ const styles = theme => ({
   }
 })
 
-export default injectSheet(styles)(H3)
+export default injectSheet(styles)(St2)
