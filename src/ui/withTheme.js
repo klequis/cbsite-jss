@@ -1,13 +1,13 @@
 import React from 'react'
-import { ThemeProvider } from 'react-jss'
 import theme from 'theme'
 
-function withTheme(Component) {
+const withTheme = Component => {
   function WithTheme(props) {
     return (
-      <ThemeProvider theme={theme}>
-        <Component {...props} />
-      </ThemeProvider>
+      <Component
+        theme={theme}
+        {...props}
+      />
     )
   }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import injectSheet from 'react-jss'
-import H2 from 'ui/typography/H2'
+import Text from 'ui/Text'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import iReactRouter from 'media/new/react-router.svg'
 import iRedux from 'media/new/redux.svg'
@@ -37,7 +37,7 @@ const TheRestSkills = (props) => {
         elevation={0}
         style={shadowStyle}
       >
-      <H2 align='center'>...And the rest of my current skills</H2>
+      <Text variant='h2'>...And the rest of my current skills</Text>
       <div className={classes.theRestLogos}>
           <ResponsiveImage src={iAWS} className={classes.restLogo} alt='aws javascript sdk logo' />
           <ResponsiveImage src={iRedux} className={classes.restLogo} alt='redux logo' />

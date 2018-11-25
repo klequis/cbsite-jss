@@ -20,7 +20,6 @@ export default function createBreakpoints(breakpoints) {
   } = breakpoints
 
   function up(key) {
-    // console.log('up: key=', key)
     const value = typeof values[key] === 'number' ? values[key] : key
     return `@media (min-width:${value}${unit})`
   }
@@ -39,10 +38,7 @@ export default function createBreakpoints(breakpoints) {
   }
 
   function between(start, end) {
-    console.log('between: start', start)
-    console.log('between: end', end)
     const endIndex = keys.indexOf(end) + 1
-    console.log('between: endIndex', endIndex)
     if (endIndex === keys.length) {
       return up(start)
     }
@@ -54,11 +50,7 @@ export default function createBreakpoints(breakpoints) {
   }
 
   function only(key) {
-    console.log('only: key', key)
-    const r = between(key, key)
-    console.log('only: r', r)
-    return r
-    // return between(key, key)
+    return between(key, key)
   }
 
   function width(key) {

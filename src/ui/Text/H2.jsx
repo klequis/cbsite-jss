@@ -2,33 +2,33 @@ import React from 'react'
 import injectSheet from 'react-jss'
 import classNames from 'classnames'
 
-const H1 = ({ children, classes}) => {
+const H2 = ({ children, classes }) => {
   return (
-    <h1
+    <h2
       // align={align ? align : 'left'}
       className={classNames([classes.common, classes.font])}
     >
       {children}
-    </h1>
+    </h2>
   )
 }
 
 const styles = theme => {
 
-  const common = theme.typography.common
-  const xsFontSize = theme.typography.xs.h1.fontSize
-  const mdFontSize = theme.typography.md.h1.fontSize
+  const common = theme.typography.headings.common
+  const xs = theme.typography.headings.xs.h2
+  const md = theme.typography.headings.md.h2
   return ({
     common,
     font: {
-      fontSize: xsFontSize,
+      fontSize: xs.fontSize,
+      lineHeight: xs.lineHeight,
       [theme.breakpoints.up('md')]: {
-        fontSize: mdFontSize,
+        fontSize: md.fontSize,
+        lineHeight: md.lineHeight,
       }
     }
   })
 }
 
-console.log('STYLES', styles.theme)
-
-export default injectSheet(styles)(H1)
+export default injectSheet(styles)(H2)

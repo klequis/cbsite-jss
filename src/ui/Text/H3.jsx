@@ -15,18 +15,17 @@ const H3 = ({ children, classes }) => {
 
 const styles = theme => {
 
-  const common = theme.typography.common
-  console.log('common', common)
-  const xsFontSize = theme.typography.xs.h3.fontSize
-  console.log('xsFontSize', xsFontSize)
-  const mdFontSize = theme.typography.md.h3.fontSize
-  console.log('mdFontSize', mdFontSize)
+  const common = theme.typography.headings.common
+  const xs = theme.typography.headings.xs.h3
+  const md = theme.typography.headings.md.h3
   return ({
     common,
     font: {
-      fontSize: xsFontSize,
+      fontSize: xs.fontSize,
+      lineHeight: xs.lineHeight,
       [theme.breakpoints.up('md')]: {
-        fontSize: mdFontSize,
+        fontSize: md.fontSize,
+        lineHeight: md.lineHeight,
       }
     }
   })

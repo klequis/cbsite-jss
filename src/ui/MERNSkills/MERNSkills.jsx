@@ -4,8 +4,7 @@ import iMongo from 'media/new/mongodb.svg'
 import iExpress from 'media/new/express.svg'
 import iReact from 'media/new/react.svg'
 import iNode from 'media/new/node.svg'
-import H1 from 'ui/typography/H1'
-import H2 from 'ui/typography/H2'
+import Text from 'ui/Text'
 
 const fluidStyle = {
   imgFluid: {
@@ -38,8 +37,8 @@ const Skills = (props) => {
           </div>
         </div>
         <div className={classes.textSideStyle}>
-          <H1>Carl Becker</H1>
-          <H2>MERN Stack Developer</H2>
+          <Text variant='h1'>Carl Becker</Text>
+          <Text variant='h2'>MERN Stack Developer</Text>
         </div>
       </div>
     )
@@ -50,8 +49,8 @@ const Skills = (props) => {
       elevation={0}
     >
       <div className={classes.textSideStyle}>
-        <H1>Carl Becker</H1>
-        <H2>MERN Stack Developer</H2>
+        <Text variant='h1'>Carl Becker</Text>
+        <Text variant='h2'>MERN Stack Developer</Text>
       </div>
       <div className={classes.imageSideStyle}>
         <div className={classes.logoRow}>
@@ -75,12 +74,7 @@ const Skills = (props) => {
   )
 }
 
-
-
 const styles = theme => {
-  // const space = theme.spacing.unit
-  // console.log('theme', theme.breakpoints.up('md'))
-  // console.log('break', theme.breakpoints.up(316))
   return({
     imgWrapper: {
       width: 300,

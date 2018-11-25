@@ -1,5 +1,5 @@
 import React from 'react'
-import withTheme from 'ui/withTheme'
+import withThemeProvider from 'ui/withThemeProvider'
 import App from './App'
 import injectSheet from 'react-jss'
 import { compose } from 'recompose'
@@ -48,7 +48,7 @@ const AppWrapper = ({ classes }) => {
 }
 
 export default compose(
-  withTheme,
+  withThemeProvider,
   injectSheet(styles)
 )(AppWrapper)
 
