@@ -8,7 +8,7 @@ import St1 from 'ui/typography/St1'
 import St2 from 'ui/typography/St2'
 import St3 from 'ui/typography/St3'
 import Home from 'ui/Home'
-
+import Breakpoint from 'ui/Breakpoint'
 const styles = {
 }
 
@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header>
+          <Breakpoint />
           <H1>Header One</H1>
           <St1>Sub-Heading One</St1>
           <H2>Header Two</H2>
@@ -25,8 +25,7 @@ class App extends Component {
           <St3>Sub-Heading Three</St3>
           <H4>Header Four</H4>
           <p>paragraph text</p>
-          <Home />
-        </header>
+          {/* <Home /> */}
       </div>
     )
   }

@@ -9,10 +9,10 @@ export default function createBreakpoints(breakpoints) {
     // For instance with the first breakpoint xs: [xs, sm[.
     values = {
       xs: 0,
-      sm: 600,
-      md: 960,
+      sm: 360,
+      md: 736,
       lg: 1280,
-      xl: 1920,
+      xl: 1680,
     },
     unit = 'px',
     step = 5,

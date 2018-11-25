@@ -23,7 +23,6 @@ const Home = (props) => {
   const { classes } = props
   return (
     <div>
-      <p>text in a paragraph</p>
       <MERNSkills />
       <Section image={iResponsive} imageSide='left' shadow>
         <H2>Responsive</H2>

@@ -14,7 +14,10 @@ const H4 = ({ children, classes }) => {
 
 const styles = theme => ({
   font: {
-    fontSize: '1.1rem',
+    fontSize: '1rem',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.1rem',
+    },
     marginBottom: '1rem',
     textAlign: 'center',
     [theme.breakpoints.down('sm')]: {
