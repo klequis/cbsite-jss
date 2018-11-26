@@ -51,7 +51,7 @@ const styles = {
   },
   imageSideStyle: {
     // flexBasis: '33.333333%',
-    width: '35%',
+    flexBasis: '45%',
     // backgroundColor: 'orange',
     paddingTop: 8,
     paddingBottom: 8,
@@ -61,7 +61,7 @@ const styles = {
   textSideStyle: {
     // flexBasis: '66.666666%',
     // backgroundColor: 'purple',
-    width: '65%',
+    flexBasis: '55%',
     padding: '4rem 4rem 2rem 4rem',
     margin: '0 auto',
     flexShrink: 1,

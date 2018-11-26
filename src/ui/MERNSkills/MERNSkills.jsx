@@ -6,7 +6,7 @@ import iReact from 'media/new/react.svg'
 import iNode from 'media/new/node.svg'
 import Text from 'ui/Text'
 
-const fluidStyle = {
+const logoStyle = {
   imgFluid: {
     display: 'block',
     width: '100%',
@@ -16,131 +16,105 @@ const fluidStyle = {
 }
 
 const Skills = (props) => {
-  const { classes, imageSide } = props
+  const { classes } = props
 
-  if (imageSide === 'left') {
-    return (
-      <div
-        className={classes.wrapper}
-        elevation={0}
-
-      >
-        <div className={classes.imageSideStyle}>
-          <div className={classes.logoRow}>
-            <img src={iMongo} alt='mongo db logo'/>
-            <img src={iExpress} alt='express js logo' />
-
-          </div>
-          <div className={classes.logoRow}>
-            <img src={iReact} alt='react js logo' />
-            <img src={iNode} alt='node js logo' />
-          </div>
-        </div>
-        <div className={classes.textSideStyle}>
-          <Text variant='h1'>Carl Becker</Text>
-          <Text variant='h2'>MERN Stack Developer</Text>
-        </div>
-      </div>
-    )
-  }
   return (
-    <div
-      className={classes.wrapper}
-      elevation={0}
-    >
-      <div className={classes.textSideStyle}>
+    <div className={classes.wrapper}>
+      <div className={classes.text}>
         <Text variant='h1'>Carl Becker</Text>
-        <Text variant='h2'>MERN Stack Developer</Text>
+        <Text variant='subtitle1'>MERN Stack Developer</Text>
       </div>
-      <div className={classes.imageSideStyle}>
-        <div className={classes.logoRow}>
+      <div className={classes.image}>
+        <div className={classes.logoGroup}>
           <div className={classes.imgWrapper}>
-            <img src={iMongo} alt='mongo db logo' className={classes.fluid}/>
+            <img src={iMongo} alt='mongo db logo' className={classes.logo}/>
           </div>
           <div className={classes.imgWrapper}>
-            <img src={iExpress} alt='express js logo' className={classes.fluid} />
+            <img src={iExpress} alt='express js logo' className={classes.logo} />
           </div>
         </div>
-        <div className={classes.logoRow}>
+        <div className={classes.logoGroup}>
           <div className={classes.imgWrapper}>
-            <img src={iReact} alt='react js logo' className={classes.fluid}/>
+            <img src={iReact} alt='react js logo' className={classes.logo}/>
           </div>
           <div className={classes.imgWrapper}>
-            <img src={iNode} alt='node js logo' className={classes.fluid}/>
+            <img src={iNode} alt='node js logo' className={classes.logo}/>
           </div>
         </div>
       </div>
     </div>
   )
+
 }
 
 const styles = theme => {
   return({
+    wrapper: {
+      backgroundColor: 'red', //tmp
+      display: 'flex',
+      flexDirection: 'column',
+      margin: 8,
+      minHeight: 100,
+
+      backgroundColor: 'transparent',
+      [theme.breakpoints.up('md')]: {
+        flexDirection: 'row',
+      }
+    },
+    image: {
+      // backgroundColor: 'green', //tmp
+      // width: '45%',
+      flexBasis: '45%',
+      // paddingTop: 8,
+      // paddingBottom: 8,
+      // display: 'flex',
+      // flexDirection: 'column',
+      // alignItems: 'space-between',
+      // justifyContent: 'space-evenly',
+    },
+    text: {
+      // backgroundColor: 'blue', //tmp
+      //width: '55%',
+      flexBasis: '55%',
+      // padding: '4rem 4rem 2rem 4rem',
+      // margin: '0 auto',
+      // flexShrink: 1,
+      // alignSelf: 'center',
+      // maxWidth: '64rem',
+      // textAlign: 'left',
+    },
     imgWrapper: {
       width: 300,
       // backgroundColor: 'yellow',
       marginLeft: 'auto',
       marginRight: 'auto',
     },
-    fluid: {
+    logo: {
       display: 'block',
-      width: '100%',
+      width: '60%',
       margin: 'auto',
+    },
 
-    },
-    imageSideStyle: {
-      // flexBasis: '33.333333%',
-      width: '45%',
-      // backgroundColor: 'orange',
-      // paddingTop: 8,
-      // paddingBottom: 8,
+    logoGroup: {
       display: 'flex',
+      // flexFlow: 'row wrap',
       flexDirection: 'column',
-      alignItems: 'space-between',
-      justifyContent: 'space-evenly',
-    },
-    textSideStyle: {
-      // backgroundColor: 'purple',
-      width: '55%',
-      padding: '4rem 4rem 2rem 4rem',
-      margin: '0 auto',
-      flexShrink: 1,
-      alignSelf: 'center',
-      maxWidth: '64rem',
-      textAlign: 'left',
-    },
-    logoRow: {
-      display: 'flex',
-      flexFlow: 'row wrap',
-      justifyContent: 'center',
+      // justifyContent: 'center',
+      alignItems: 'center',
       paddingLeft: 0,
       paddingRight: 0,
-      [theme.breakpoints.up(316)]: {
+      [theme.breakpoints.only('xs')]: {
         justifyContent: 'space-between',
-        backgroundColor: 'purple',
       },
-      // [theme.breakpoints.up(400)]: {
-        // paddingLeft: '10%',
-        // paddingRight: '10%',
+    },
 
-      // },
-      // [theme.breakpoints.up(690)]: {
-      //   // paddingLeft: '15%',
-      //   // paddingRight: '15%',
-      // },
-      // [theme.breakpoints.up(800)]: {
-      //   // paddingLeft: '20%',
-      //   // paddingRight: '20%',
-      // },
-    },
-    wrapper: {
-      display: 'flex',
-      margin: 8,
-      minHeight: 100,
-      backgroundColor: 'transparent',
-      // backgroundColor: 'lightblue',
-    },
   })
 }
 
 export default injectSheet(styles)(Skills)
+
+
+/*
+
+
+    */

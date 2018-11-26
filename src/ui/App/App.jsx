@@ -11,8 +11,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Breakpoint />
-        <Text variant='h1'>Header One</Text>
+        {/* <Breakpoint /> */}
+        {/* <Text variant='h1'>Header One</Text>
         <Text variant={'subtitle1'}>Sub-title One</Text>
         <Text variant='h2'>Header Two</Text>
         <Text variant='subtitle2'>Sub-title Two</Text>

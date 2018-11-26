@@ -73,6 +73,9 @@ const styles = theme => {
       h2: md.h2,
       h3: md.h3,
       h4: md.h4,
+      subtitle1: md.subtitle1,
+      subtitle2: md.subtitle2,
+      subtitle3: md.subtitle3,
     },
 
   })
