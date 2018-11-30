@@ -1,16 +1,29 @@
 import React from 'react'
+import { compose } from 'recompose'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import injectSheet from 'react-jss'
+import withBreakpoint from 'ui/withBreakpoint'
+
 
 const shadowStyle = {
   boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
 }
 
 const Section = (props) => {
-  const { children, classes, image, imageSide='left', shadow } = props
 
+  const {
+    breakpoint,
+    children,
+    classes,
+    image,
+    imageSide='left',
+    shadow
+  } = props
 
-  if (imageSide === 'left') {
+  const side = (breakpoint === 'xs' || breakpoint === 'sm') ? 'right' : imageSide
+  console.log('side', side);
+
+  if (side === 'left') {
     return (
       <div
         className={classes.wrapper}
@@ -42,12 +55,16 @@ const Section = (props) => {
   )
 }
 
-const styles = {
+const styles = theme => ({
   wrapper: {
     display: 'flex',
+    flexDirection: 'column',
     margin: 8,
     minHeight: 100,
     backgroundColor: 'transparent',
+    [theme.breakpoints.up('md')]: {
+      flexDirection: 'row',
+    }
   },
   imageSideStyle: {
     // flexBasis: '33.333333%',
@@ -70,6 +87,9 @@ const styles = {
     textAlign: 'left',
   },
 
-}
+})
 
-export default injectSheet(styles)(Section)
+export default compose(
+  withBreakpoint,
+  injectSheet(styles)
+)(Section)

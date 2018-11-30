@@ -10,6 +10,7 @@ const CACF = () => {
       <Text variant='h2'>Coalition for Asian American Children & Families</Text>
       <Text variant='subtitle2'>Board Member</Text>
       <Text variant='body1'>Served on CACF's board for 3 years.</Text>
+      NYC WPF & Silverlight
     </Section>
   )
 }

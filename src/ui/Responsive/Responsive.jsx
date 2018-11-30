@@ -1,21 +1,21 @@
 import React from 'react'
 import injectSheet from 'react-jss'
 import Text from 'ui/Text'
-// import Section from 'ui/Section'
+import Section from 'ui/Section'
 import iResponsive from 'media/new/responsive.svg'
-import ResponsiveImage from 'ui/ResponsiveImage'
+// import ResponsiveImage from 'ui/ResponsiveImage'
 
 const Responsive = ({ classes }) => {
   return (
-    <section className={classes.wrapper}>
+    <Section className={classes.wrapper} image={iResponsive}>
       <Text variant='h2'>Responsive Web Apps</Text>
-      <div className={classes.imageWrapper}>
-        <ResponsiveImage src={iResponsive} />
-      </div>
+      {/* <div className={classes.imageWrapper}>
+        <ResponsiveImage src={iResponsive} alt='responsive website on phone, table and laptop'/>
+      </div> */}
       <Text variant='subtitle2'>A responsive Web Developer</Text>
       <Text variant='subtitle2'> Using responsive CSS</Text>
       <Text variant='subtitle2'>To make responsive Web Apps</Text>
-    </section>
+    </Section>
   )
 }
 

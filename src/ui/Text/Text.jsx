@@ -37,8 +37,8 @@ const unknown = {
 }
 
 const Text = ({ children, classes, theme, variant }) => {
-  console.log('Text: variant', variant)
-  console.log('Text: children', children)
+  // console.log('Text: variant', variant)
+  // console.log('Text: children', children)
 
   const Component = getElementForVarient(variant)
 

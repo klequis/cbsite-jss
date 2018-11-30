@@ -22,12 +22,10 @@ import iDrupal from 'media/new/drupal.svg'
 import iAWS from 'media/new/aws-sdk-js.svg'
 import iJS from 'media/new/js-es6.svg'
 import iBootstrap from 'media/new/bootstrap.svg'
-import iCSharp from 'media/new/c-sharp.png'
 
 const shadowStyle = {
   boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
 }
-
 
 const TheRestSkills = (props) => {
   const { classes } = props
@@ -37,7 +35,7 @@ const TheRestSkills = (props) => {
         elevation={0}
         style={shadowStyle}
       >
-      <Text variant='h2'>...And the rest of my current skills</Text>
+      <Text variant='h2'>Current Toolkit</Text>
       <div className={classes.theRestLogos}>
           <ResponsiveImage src={iAWS} className={classes.restLogo} alt='aws javascript sdk logo' />
           <ResponsiveImage src={iRedux} className={classes.restLogo} alt='redux logo' />
@@ -79,10 +77,10 @@ const styles = {
   theRestLogos: {
     // minHeight: 300,
     display: 'flex',
-    flexFlow: 'row wrap',
+    // flexFlow: 'row wrap',
     justifyContent: 'flex-start',
-    paddingLeft: '5%',
-    paddingRight: '5%',
+    // paddingLeft: '5%',
+    // paddingRight: '5%',
     // alignItems: 'center',
   }
 }

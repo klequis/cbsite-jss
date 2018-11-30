@@ -7,17 +7,15 @@ const ResponsiveImage = ({ alt, classes, src, className }) => {
   // const cls = classNames(classes.imgFluid, className)
   // className={cls}
   return (
-    <div className={classes.wrapper}>
     <img src={src} alt={alt}  className={classes.imgFluid}/>
-    </div>
   )
 }
 
 const styles = {
   wrapper: {
-    backgroundColor: 'red', //tmp
-    paddingRight: '20%',
-    paddingLeft: '20%',
+    // backgroundColor: 'red', //tmp
+    // paddingRight: '20%',
+    // paddingLeft: '20%',
   },
   imgFluid: {
     display: 'block',

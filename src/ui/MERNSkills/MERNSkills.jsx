@@ -50,7 +50,7 @@ const Skills = (props) => {
 const styles = theme => {
   return({
     wrapper: {
-      backgroundColor: 'red', //tmp
+      // backgroundColor: 'red', //tmp
       display: 'flex',
       flexDirection: 'column',
       margin: 8,
@@ -84,10 +84,15 @@ const styles = theme => {
       // textAlign: 'left',
     },
     imgWrapper: {
-      width: 300,
+      width: 200,
+      [theme.breakpoints.up('md')]: {
+        width: 300,
+      },
+
       // backgroundColor: 'yellow',
       marginLeft: 'auto',
       marginRight: 'auto',
+
     },
     logo: {
       display: 'block',
