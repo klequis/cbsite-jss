@@ -9,7 +9,7 @@ import HKNC from 'ui/HKNC'
 import CACF from 'ui/CACF'
 import MERNSkills from 'ui/MERNSkills'
 import RestOfSkills from 'ui/RestOfSkills'
-// import { Breakpoints } from 'ui/createBreakpoints'
+import WPFSilverlight from 'ui/WPFSilverlight'
 
 const Home = (props) => {
   return (
@@ -20,6 +20,7 @@ const Home = (props) => {
       <MorganStanley />
       <ThomsonReuters />
       <RestOfSkills />
+      <WPFSilverlight />
       <Riding />
       <HKNC />
       <CACF />

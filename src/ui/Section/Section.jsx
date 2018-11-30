@@ -67,16 +67,14 @@ const styles = theme => ({
     }
   },
   imageSideStyle: {
-    // flexBasis: '33.333333%',
-    flexBasis: '45%',
     // backgroundColor: 'orange',
+    flexBasis: '45%',
     paddingTop: 8,
     paddingBottom: 8,
     display: 'flex',
     alignItems: 'center',
   },
   textSideStyle: {
-    // flexBasis: '66.666666%',
     // backgroundColor: 'purple',
     flexBasis: '55%',
     padding: '4rem 4rem 2rem 4rem',

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import withTheme from 'ui/withTheme'
-
+import classNames from 'classnames'
 
 const variants = [
   'h1',
@@ -36,7 +36,7 @@ const unknown = {
   fontWeight: 'bold',
 }
 
-const Text = ({ children, classes, theme, variant }) => {
+const Text = ({ children, classes, theme, variant, align }) => {
   // console.log('Text: variant', variant)
   // console.log('Text: children', children)
 
@@ -45,10 +45,18 @@ const Text = ({ children, classes, theme, variant }) => {
   if (!variants.includes(variant)) {
     return <p style={unknown}>unknow variant {variant}</p>
   }
+  let alignClassName = ''
+  if (align === 'center') {
+    alignClassName = 'center'
+  } else {
+    alignClassName = 'left'
+  }
+
   return (
     <Component
       // align={align ? align : 'left'}
-      className={classes[variant]}
+      align={align ? classes[align] : classes.left}
+      className={classNames(classes[variant], classes[alignClassName])}
     >
       {children}
     </Component>
@@ -77,7 +85,12 @@ const styles = theme => {
       subtitle2: md.subtitle2,
       subtitle3: md.subtitle3,
     },
-
+    left: {
+      textAlign: 'left',
+    },
+    center: {
+      textAlign: 'center',
+    },
   })
 }
 

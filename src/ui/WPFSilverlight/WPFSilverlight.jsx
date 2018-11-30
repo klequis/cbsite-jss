@@ -4,21 +4,45 @@ import injectSheet from 'react-jss'
 import Text from 'ui/Text'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
-import iCacf from 'media/new/cacf.png'
+import iWPF from 'media/new/wpf.png'
+import iSilverlight from 'media/new/silverlight.png'
 
+const imageStyles = {
+  img: {
+    display: 'flex',
+  },
+  silverlight: {
+    // backgroundColor: 'red',
+    maxWidth: 200,
+    margin: '0 10px'
+  },
+  wpf: {
+    // backgroundColor: 'green',
+    maxWidth: 410,
+    margin: '0 10px'
+  }
+
+}
 const image = (
-  <ResponsiveImage  src={iCacf} alt='responsive site on multi form factors' />
+  <div style={imageStyles.img}>
+    <div style={imageStyles.wpf}>
+      <ResponsiveImage src={iWPF} alt='microsoft windows presentation
+      foundation' />
+    </div>
+    <div style={imageStyles.silverlight}>
+      <ResponsiveImage src={iSilverlight} alt='microsoft silverlight' />
+    </div>
+  </div>
 )
 const text = (
   <div>
-    <Text variant='h2'>Coalition for Asian American Children & Families</Text>
-    <Text variant='subtitle2'>Board Member</Text>
-    <Text variant='body1'>Served on CACF's board for 3 years.</Text>
-    NYC WPF & Silverlight
+    <Text variant='h2'>New York City WPF & Silverlight Meetup</Text>
+    <Text variant='subtitle2'>Co-organizer</Text>
+    <Text variant='body1'>Co-organized and frequently presented at this Microsoft sponsored Meetup.</Text>
   </div>
 )
 
-const CACF = ({ classes, breakpoint }) => {
+const HKNC = ({ classes, breakpoint }) => {
 
   const small = (breakpoint === 'xs' || breakpoint === 'sm')
 
@@ -35,11 +59,11 @@ const CACF = ({ classes, breakpoint }) => {
       )
     : (
         <section className={classes.wrapper}>
-          <div className={classes.textSide}>
-            { text }
-          </div>
           <div className={classes.imageSide}>
             { image }
+          </div>
+          <div className={classes.textSide}>
+            { text }
           </div>
         </section>
       )
@@ -76,24 +100,4 @@ const styles = theme => ({
 export default compose(
   withBreakpoint,
   injectSheet(styles)
-)(CACF)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+)(HKNC)

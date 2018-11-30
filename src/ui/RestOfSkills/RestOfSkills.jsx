@@ -30,35 +30,36 @@ const shadowStyle = {
 const TheRestSkills = (props) => {
   const { classes } = props
   return (
-    <div
+    <section
         className={classes.wrapper}
         elevation={0}
         style={shadowStyle}
       >
-      <Text variant='h2'>Current Toolkit</Text>
+      <Text variant='h2' align='center'>Current Toolkit</Text>
       <div className={classes.theRestLogos}>
-          <ResponsiveImage src={iAWS} className={classes.restLogo} alt='aws javascript sdk logo' />
-          <ResponsiveImage src={iRedux} className={classes.restLogo} alt='redux logo' />
-          <ResponsiveImage src={iReactRouter} className={classes.restLogo} alt='react router logo' />
-          <ResponsiveImage src={iMUI} className={classes.restLogo} alt='material ui logo' />
-          <ResponsiveImage src={iBootstrap} className={classes.restLogo} alt='bootstrap logo' />
-          <ResponsiveImage src={iRest} className={classes.restLogo} alt='rest api logo' />
-          <ResponsiveImage src={iMySql} className={classes.restLogo} alt='material ui logo' />
-          <ResponsiveImage src={iJS} className={classes.restLogo} alt='javascript logo' />
-          <ResponsiveImage src={iRamda} className={classes.restLogo} alt='ramda logo' />
-          <ResponsiveImage src={iNodemon} className={classes.restLogo} alt='nodemon logo' />
-          <ResponsiveImage src={iMocha} className={classes.restLogo} alt='mocha logo' />
-          <ResponsiveImage src={iWebpack} className={classes.restLogo} alt='webpack logo' />
-          <ResponsiveImage src={iUbuntu} className={classes.restLogo} alt='ubuntu logo' />
-          <ResponsiveImage src={iTravis} className={classes.restLogo} alt='travis ci logo' />
-          <ResponsiveImage src={iPassport} className={classes.restLogo} alt='passport logo' />
-          <ResponsiveImage src={iZenHub} className={classes.restLogo} alt='zenhub logo' />
-          <ResponsiveImage src={iMarkdown} className={classes.restLogo} alt='markdown logo' />
-          <ResponsiveImage src={iYarn} className={classes.restLogo} alt='yarn logo' />
-          <ResponsiveImage src={iDrupal} className={classes.restLogo} alt='drupal logo' />
-          <ResponsiveImage src={iWordpress} className={classes.restLogo} alt='wordpress logo' />
+
+          <img src={iAWS} className={classes.restLogo} alt='aws javascript sdk logo' />
+          <img src={iRedux} className={classes.restLogo} alt='redux logo' />
+          <img src={iReactRouter} className={classes.restLogo} alt='react router logo' />
+          <img src={iMUI} className={classes.restLogo} alt='material ui logo' />
+          <img src={iBootstrap} className={classes.restLogo} alt='bootstrap logo' />
+          <img src={iRest} className={classes.restLogo} alt='rest api logo' />
+          <img src={iMySql} className={classes.restLogo} alt='material ui logo' />
+          <img src={iJS} className={classes.restLogo} alt='javascript logo' />
+          <img src={iRamda} className={classes.restLogo} alt='ramda logo' />
+          <img src={iNodemon} className={classes.restLogo} alt='nodemon logo' />
+          <img src={iMocha} className={classes.restLogo} alt='mocha logo' />
+          <img src={iWebpack} className={classes.restLogo} alt='webpack logo' />
+          <img src={iUbuntu} className={classes.restLogo} alt='ubuntu logo' />
+          <img src={iTravis} className={classes.restLogo} alt='travis ci logo' />
+          <img src={iPassport} className={classes.restLogo} alt='passport logo' />
+          <img src={iZenHub} className={classes.restLogo} alt='zenhub logo' />
+          <img src={iMarkdown} className={classes.restLogo} alt='markdown logo' />
+          <img src={iYarn} className={classes.restLogo} alt='yarn logo' />
+          <img src={iDrupal} className={classes.restLogo} alt='drupal logo' />
+          <img src={iWordpress} className={classes.restLogo} alt='wordpress logo' />
         </div>
-    </div>
+    </section>
   )
 }
 
@@ -67,18 +68,22 @@ const styles = {
     // marginRight: 5,
     // marginLeft: 5,
     margin: '1rem 1rem',
+    // maxHeight: 70,
+
   },
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    padding: '4rem 0'
+    // alignItems: 'center',
+    padding: '4rem 4rem'
+
   },
   theRestLogos: {
     // minHeight: 300,
     display: 'flex',
-    // flexFlow: 'row wrap',
-    justifyContent: 'flex-start',
+    flexFlow: 'row wrap',
+    justifyContent: 'center',
     // paddingLeft: '5%',
     // paddingRight: '5%',
     // alignItems: 'center',
