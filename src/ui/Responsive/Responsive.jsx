@@ -13,9 +13,9 @@ const image = (
 const text = (
 <div>
   <Text variant='h2'>Responsive Web Apps</Text>
-  <Text variant='subtitle2'>A responsive Web Developer</Text>
-  <Text variant='subtitle2'> Using responsive CSS</Text>
-  <Text variant='subtitle2'>To make responsive Web Apps</Text>
+  <Text variant='subtitle2'>Responsive Web Developer</Text>
+  <Text variant='subtitle2'> Responsive CSS</Text>
+  <Text variant='subtitle2'>Responsive Web Apps</Text>
 </div>
 )
 
@@ -36,11 +36,11 @@ const Responsive = ({ classes, breakpoint }) => {
       )
     : (
         <section className={classes.wrapper}>
-          <div className={classes.textSide}>
-            { text }
-          </div>
           <div className={classes.imageSide}>
             { image }
+          </div>
+          <div className={classes.textSide}>
+            { text }
           </div>
         </section>
       )
@@ -49,28 +49,29 @@ const Responsive = ({ classes, breakpoint }) => {
 
 const styles = theme => ({
   wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
+
+
     boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-    backgroundColor: 'transparent',
+    // backgroundColor: 'transparent',
+    // display: 'flex',
+    // flexDirection: 'column',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
     }
   },
   imageSide: {
-    backgroundColor: 'rgb(230, 230, 230)',
-    flexBasis: '45%',
-    // padding: '0 30px',
     padding: '0 50px',
-    // maxWidth: 300,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // flexBasis: '45%',
+    // display: 'flex',
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    // backgroundColor: 'rgb(230, 230, 230)',
   },
   textSide: {
     // backgroundColor: 'purple',
-    flexBasis: '55%',
+
     padding: '4rem 4rem 2rem 4rem',
+    // flexBasis: '55%',
   },
 })
 

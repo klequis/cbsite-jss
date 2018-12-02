@@ -3,7 +3,7 @@ import injectSheet from 'react-jss'
 import Text from 'ui/Text'
 import { compose } from 'recompose'
 import ResponsiveImage from 'ui/ResponsiveImage'
-import iMS from 'media/ms01.png'
+import iMS from 'media/new/morgan-stanley.white.01.01.png'
 import withBreakpoint from 'ui/withBreakpoint'
 
 const image = (
@@ -35,11 +35,11 @@ const MorganStanley = ({ classes, breakpoint }) => {
       )
     : (
         <section className={classes.wrapper}>
-          <div className={classes.textSide}>
-            {text}
-          </div>
           <div className={classes.imageSide}>
             {image}
+          </div>
+          <div className={classes.textSide}>
+            {text}
           </div>
         </section>
       )
@@ -47,23 +47,29 @@ const MorganStanley = ({ classes, breakpoint }) => {
 
 const styles = theme => ({
   wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
+
     boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-    backgroundColor: 'transparent',
+    // display: 'flex',
+    // flexDirection: 'column',
+    // backgroundColor: 'transparent',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
       justifyContent: 'space-between'
     }
   },
   imageSide: {
-    backgroundColor: '#112951',
-    flexBasis: '45%',
+
+
     padding: '0 100px',
     maxWidth: 300,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
+
+    // flexBasis: '45%',
+    // display: 'flex',
+    // alignItems: 'center',
+    // justifyContent: 'flex-end',
+    // [theme.breakpoints.up('md')]: {
+      // backgroundColor: '#112951',
+    // }
   },
   textSide: {
     // backgroundColor: 'purple',

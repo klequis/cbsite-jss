@@ -36,7 +36,7 @@ const unknown = {
   fontWeight: 'bold',
 }
 
-const Text = ({ children, classes, theme, variant, align }) => {
+const Text = ({ children, classes, theme, variant /*, align */ }) => {
   // console.log('Text: variant', variant)
   // console.log('Text: children', children)
 
@@ -45,18 +45,18 @@ const Text = ({ children, classes, theme, variant, align }) => {
   if (!variants.includes(variant)) {
     return <p style={unknown}>unknow variant {variant}</p>
   }
-  let alignClassName = ''
-  if (align === 'center') {
-    alignClassName = 'center'
-  } else {
-    alignClassName = 'left'
-  }
+  // let alignClassName = ''
+  // if (align === 'center') {
+  //   alignClassName = 'center'
+  // } else {
+  //   alignClassName = 'left'
+  // }
 
   return (
     <Component
-      // align={align ? align : 'left'}
-      align={align ? classes[align] : classes.left}
-      className={classNames(classes[variant], classes[alignClassName])}
+      // align={align ? classes[align] : classes.left}
+      // className={classNames(classes[variant], classes[alignClassName])}
+      className={classes[variant]}
     >
       {children}
     </Component>

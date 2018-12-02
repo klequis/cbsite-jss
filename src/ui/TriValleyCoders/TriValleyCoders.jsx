@@ -35,17 +35,15 @@ const TriValleyCoders = ({ classes, breakpoint }) => {
                   { image }
                 </div>
               </div>
-
             )
           : (
               <div className={classes.wrapper}>
-                <div className={classes.imageSide}>
-                  { image }
-                </div>
                 <div className={classes.textSide}>
                   { text }
                 </div>
-
+                <div className={classes.imageSide}>
+                  { image }
+                </div>
               </div>
             )
       }
@@ -55,27 +53,30 @@ const TriValleyCoders = ({ classes, breakpoint }) => {
 
 const styles = theme => ({
   wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
+
     boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-    backgroundColor: 'transparent',
+    // backgroundColor: 'transparent',
+
+    // display: 'flex',
+    // flexDirection: 'column',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
     }
   },
   imageSide: {
     // backgroundColor: 'red',
-    flexBasis: '45%',
-    // padding: '0 30px',
-    // maxWidth: 300,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+
+    // display: 'flex',
+    // flexBasis: '45%',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   textSide: {
     // backgroundColor: 'purple',
-    flexBasis: '55%',
-    padding: '4rem 4rem 2rem 4rem',
+
+    padding: '4rem 3rem 2rem 3rem',
+    // flexBasis: '55%',
+    // padding: '4rem 4rem 2rem 4rem',
   },
 })
 

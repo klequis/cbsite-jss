@@ -4,8 +4,8 @@ import injectSheet from 'react-jss'
 import Text from 'ui/Text'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
-import iWPF from 'media/new/wpf.png'
-import iSilverlight from 'media/new/silverlight.png'
+import iWPF from 'media/new/wpf-smaller.png'
+import iSilverlight from 'media/new/silverlight-smaller.png'
 
 const imageStyles = {
   img: {
@@ -42,7 +42,7 @@ const text = (
   </div>
 )
 
-const HKNC = ({ classes, breakpoint }) => {
+const WPFSilverlight = ({ classes, breakpoint }) => {
 
   const small = (breakpoint === 'xs' || breakpoint === 'sm')
 
@@ -59,11 +59,11 @@ const HKNC = ({ classes, breakpoint }) => {
       )
     : (
         <section className={classes.wrapper}>
-          <div className={classes.imageSide}>
-            { image }
-          </div>
           <div className={classes.textSide}>
             { text }
+          </div>
+          <div className={classes.imageSide}>
+            { image }
           </div>
         </section>
       )
@@ -100,4 +100,4 @@ const styles = theme => ({
 export default compose(
   withBreakpoint,
   injectSheet(styles)
-)(HKNC)
+)(WPFSilverlight)

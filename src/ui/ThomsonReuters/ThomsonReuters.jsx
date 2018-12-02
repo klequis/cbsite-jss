@@ -6,11 +6,15 @@ import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
 import iTR from 'media/tr.jpg'
 
-const image = (
-  <ResponsiveImage src={iTR} alt='logo' />
+
+
+const title = (
+  <div>
+    <Text variant='h2'>Thomson Reuters</Text>
+  </div>
 )
 
-const text = (
+const body = (
   <div>
     <Text variant='body1'>I was at Thomson Reuters for 3 years as a Product Manager where I worked with clients at Deutsche Bank, Morgan Stanley, Credit Suisse, Nomura, and Rothschild to develop Thomson Reuters MS Excel to MS PowerPoint linking application which enabled users to use Excel data & graphs with linked data PowerPoint presentations. Although there is a native equivalent, we were able to develop a product that was more stable with a feature set more tailored to our clients.</Text>
   </div>
@@ -24,21 +28,29 @@ const ThomsonReuters = ({ classes, breakpoint }) => {
     ? (
         <section className={classes.wrapper}>
           <div className={classes.textSide}>
-            { text }
+            { title }
           </div>
           <div className={classes.imageSide}>
-            { image }
+            <ResponsiveImage src={iTR} className={classes.logo} alt='logo' />
           </div>
+          <div className={classes.textSide}>
+            { body }
+          </div>
+
         </section>
       )
     : (
         <section className={classes.wrapper}>
-          <div className={classes.imageSide}>
-            { image }
+          <div className={classes.textSide}>
+            { title }
           </div>
           <div className={classes.textSide}>
-            { text }
+            { body }
           </div>
+          <div className={classes.imageSide}>
+            <ResponsiveImage src={iTR} alt='logo' />
+          </div>
+
         </section>
       )
 }
@@ -52,6 +64,9 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
     }
+  },
+  logo: {
+    maxWidth: 200,
   },
   imageSide: {
     // backgroundColor: 'red',

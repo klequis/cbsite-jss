@@ -1,15 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { compose } from 'recompose'
 import injectSheet from 'react-jss'
-import classNames from 'classnames'
+import withBreakpoint from 'ui/withBreakpoint'
 
-const ResponsiveImage = ({ alt, classes, src, className }) => {
-  const clsNames = classNames([
-    classes.imgFluid,
-    className,
-  ])
+const tmp = [
+  {
+    breakpoint: 'xs',
+    image: 'image1'
+  },
+  {
+    breakpoint: 'sm',
+    image: 'image1'
+  },
+]
+
+const getImage = (breakpoint) => {
+
+}
+
+const ResponsiveImage = ({ alt, classes, images, breakpoint }) => {
   return (
-    <img src={src} alt={alt}  className={clsNames}/>
+    <img src={src} alt={alt}  className={classes.imgFluid}/>
   )
 }
 

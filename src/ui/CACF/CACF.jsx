@@ -14,7 +14,6 @@ const text = (
     <Text variant='h2'>Coalition for Asian American Children & Families</Text>
     <Text variant='subtitle2'>Board Member</Text>
     <Text variant='body1'>Served on CACF's board for 3 years.</Text>
-    NYC WPF & Silverlight
   </div>
 )
 
@@ -35,11 +34,11 @@ const CACF = ({ classes, breakpoint }) => {
       )
     : (
         <section className={classes.wrapper}>
-          <div className={classes.textSide}>
-            { text }
-          </div>
           <div className={classes.imageSide}>
             { image }
+          </div>
+          <div className={classes.textSide}>
+            { text }
           </div>
         </section>
       )

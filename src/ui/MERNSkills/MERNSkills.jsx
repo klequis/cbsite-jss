@@ -26,20 +26,12 @@ const Skills = (props) => {
       </div>
       <div className={classes.image}>
         <div className={classes.logoGroup}>
-          <div className={classes.imgWrapper}>
-            <img src={iMongo} alt='mongo db logo' className={classes.logo}/>
-          </div>
-          <div className={classes.imgWrapper}>
-            <img src={iExpress} alt='express js logo' className={classes.logo} />
-          </div>
+          <img src={iMongo} alt='mongo db logo' className={classes.logo}/>
+          <img src={iExpress} alt='express js logo' className={classes.logo} />
         </div>
         <div className={classes.logoGroup}>
-          <div className={classes.imgWrapper}>
-            <img src={iReact} alt='react js logo' className={classes.logo}/>
-          </div>
-          <div className={classes.imgWrapper}>
-            <img src={iNode} alt='node js logo' className={classes.logo}/>
-          </div>
+          <img src={iReact} alt='react js logo' className={classes.logo}/>
+          <img src={iNode} alt='node js logo' className={classes.logo}/>
         </div>
       </div>
     </div>
@@ -51,53 +43,34 @@ const styles = theme => {
   return({
     wrapper: {
       // backgroundColor: 'red', //tmp
+      // backgroundColor: 'transparent',
       display: 'flex',
       flexDirection: 'column',
-      margin: 8,
-      minHeight: 100,
-
-      backgroundColor: 'transparent',
-      [theme.breakpoints.up('md')]: {
-        flexDirection: 'row',
-      }
+      // alignItems: 'center',
+      // margin: 8,
+      // width: '100%',
+      // [theme.breakpoints.up('md')]: {
+      //   flexDirection: 'row',
+      // }
     },
     image: {
       // backgroundColor: 'green', //tmp
-      // width: '45%',
-      flexBasis: '45%',
-      // paddingTop: 8,
-      // paddingBottom: 8,
-      // display: 'flex',
-      // flexDirection: 'column',
-      // alignItems: 'space-between',
-      // justifyContent: 'space-evenly',
+      display: 'flex',
+      justifyContent: 'space-around',
+      // eslint-disable-next-line
+      justifyContent: 'space-evenly',
+      paddingBottom: '2rem',
     },
     text: {
       // backgroundColor: 'blue', //tmp
-      //width: '55%',
-      flexBasis: '55%',
-      // padding: '4rem 4rem 2rem 4rem',
-      // margin: '0 auto',
-      // flexShrink: 1,
-      // alignSelf: 'center',
-      // maxWidth: '64rem',
-      // textAlign: 'left',
-    },
-    imgWrapper: {
-      width: 200,
-      [theme.breakpoints.up('md')]: {
-        width: 300,
-      },
-
-      // backgroundColor: 'yellow',
-      marginLeft: 'auto',
-      marginRight: 'auto',
-
+      padding: '4rem 4rem 2rem 4rem',
     },
     logo: {
-      display: 'block',
-      width: '60%',
-      margin: 'auto',
+      // display: 'block',
+      // width: '60%',
+      // flexBasis: '50%',
+      // margin: 'auto',
+      maxHeight: 40,
     },
 
     logoGroup: {

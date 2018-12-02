@@ -34,11 +34,11 @@ const HKNC = ({ classes, breakpoint }) => {
       )
     : (
         <section className={classes.wrapper}>
-          <div className={classes.imageSide}>
-            { image }
-          </div>
           <div className={classes.textSide}>
             { text }
+          </div>
+          <div className={classes.imageSide}>
+            { image }
           </div>
         </section>
       )
