@@ -22,18 +22,19 @@ import iDrupal from 'media/new/drupal.svg'
 import iAWS from 'media/new/aws-sdk-js.svg'
 import iJS from 'media/new/js-es6.svg'
 import iBootstrap from 'media/new/bootstrap.svg'
+import Section from 'ui/Section'
 
-const shadowStyle = {
-  boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-}
+// const shadowStyle = {
+//   boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
+// }
 
 const TheRestSkills = (props) => {
   const { classes } = props
   return (
-    <section
+    <Section
         className={classes.wrapper}
         elevation={0}
-        style={shadowStyle}
+        // style={shadowStyle}
       >
       <Text variant='h2' align='center'>Current Toolkit</Text>
       <div className={classes.theRestLogos}>
@@ -59,7 +60,7 @@ const TheRestSkills = (props) => {
           <img src={iDrupal} className={classes.restLogo} alt='drupal logo' />
           <img src={iWordpress} className={classes.restLogo} alt='wordpress logo' />
         </div>
-    </section>
+    </Section>
   )
 }
 

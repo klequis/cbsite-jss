@@ -5,15 +5,13 @@ import Text from 'ui/Text'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
 import iCacf from 'media/new/cacf.png'
+import Section from 'ui/Section'
 
-const image = (
-  <ResponsiveImage  src={iCacf} alt='responsive site on multi form factors' />
-)
 const text = (
   <div>
     <Text variant='h2'>Coalition for Asian American Children & Families</Text>
-    <Text variant='subtitle2'>Board Member</Text>
-    <Text variant='body1'>Served on CACF's board for 3 years.</Text>
+    <Text variant='subtitle2'>Former Board Member</Text>
+    <Text variant='body1'>I served on CACF's board for 3 years.</Text>
   </div>
 )
 
@@ -23,21 +21,21 @@ const CACF = ({ classes, breakpoint }) => {
 
   return small
     ? (
-        <section className={classes.wrapper}>
-          <div className={classes.textSide}>
+        <Section className={classes.wrapper}>
+          <div className={classes.text}>
             { text }
           </div>
-          <div className={classes.imageSide}>
-            { image }
+          <div className={classes.image}>
+            <ResponsiveImage  src={iCacf} className={classes.logo} alt='responsive site on multi form factors' />
           </div>
-        </section>
+        </Section>
       )
     : (
         <section className={classes.wrapper}>
-          <div className={classes.imageSide}>
-            { image }
+          <div className={classes.image}>
+            <ResponsiveImage  src={iCacf} alt='responsive site on multi form factors' />
           </div>
-          <div className={classes.textSide}>
+          <div className={classes.text}>
             { text }
           </div>
         </section>
@@ -46,16 +44,19 @@ const CACF = ({ classes, breakpoint }) => {
 
 
 const styles = theme => ({
+  logo: {
+    maxWidth: 210,
+  },
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
-    boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
+    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
     backgroundColor: 'transparent',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
     }
   },
-  imageSide: {
+  image: {
     // backgroundColor: 'rgb(230, 230, 230)',
     flexBasis: '45%',
     // padding: '0 30px',
@@ -65,10 +66,10 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  textSide: {
+  text: {
     // backgroundColor: 'purple',
     flexBasis: '55%',
-    padding: '4rem 4rem 2rem 4rem',
+    // padding: '4rem 4rem 2rem 4rem',
   },
 })
 

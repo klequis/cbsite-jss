@@ -5,6 +5,7 @@ import Text from 'ui/Text'
 import iMeetup01 from 'media/meetup01.jpg'
 import withBreakpoint from 'ui/withBreakpoint'
 import ResponsiveImage from 'ui/ResponsiveImage'
+import Section from 'ui/Section'
 
 const image = (
   <div>
@@ -23,38 +24,39 @@ const text = (
 const TriValleyCoders = ({ classes, breakpoint }) => {
   const small = (breakpoint === 'xs' || breakpoint === 'sm')
   return (
-    <section>
+    <Section>
       {
         small
           ? (
               <div className={classes.wrapper}>
-                <div className={classes.textSide}>
+                <div className={classes.text}>
                   { text }
                 </div>
-                <div className={classes.imageSide}>
+                <div className={classes.image}>
                   { image }
                 </div>
               </div>
             )
           : (
               <div className={classes.wrapper}>
-                <div className={classes.textSide}>
+                <div className={classes.text}>
                   { text }
                 </div>
-                <div className={classes.imageSide}>
+                <div className={classes.image}>
                   { image }
                 </div>
               </div>
             )
       }
-    </section>
+    </Section>
   )
 }
 
 const styles = theme => ({
   wrapper: {
 
-    boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
+    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
+    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.5)',
     // backgroundColor: 'transparent',
 
     // display: 'flex',
@@ -63,18 +65,19 @@ const styles = theme => ({
       flexDirection: 'row',
     }
   },
-  imageSide: {
+  image: {
     // backgroundColor: 'red',
 
     // display: 'flex',
     // flexBasis: '45%',
     // alignItems: 'center',
     // justifyContent: 'center',
+    // paddingBottom: '3em',
   },
-  textSide: {
+  text: {
     // backgroundColor: 'purple',
 
-    padding: '4rem 3rem 2rem 3rem',
+    // padding: '4rem 3rem 2rem 3rem',
     // flexBasis: '55%',
     // padding: '4rem 4rem 2rem 4rem',
   },

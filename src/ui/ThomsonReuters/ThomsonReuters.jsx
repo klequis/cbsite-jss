@@ -5,7 +5,7 @@ import Text from 'ui/Text'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
 import iTR from 'media/tr.jpg'
-
+import Section from 'ui/Section'
 
 
 const title = (
@@ -16,7 +16,7 @@ const title = (
 
 const body = (
   <div>
-    <Text variant='body1'>I was at Thomson Reuters for 3 years as a Product Manager where I worked with clients at Deutsche Bank, Morgan Stanley, Credit Suisse, Nomura, and Rothschild to develop Thomson Reuters MS Excel to MS PowerPoint linking application which enabled users to use Excel data & graphs with linked data PowerPoint presentations. Although there is a native equivalent, we were able to develop a product that was more stable with a feature set more tailored to our clients.</Text>
+    <Text variant='body1' marginBottom={false}>I was at Thomson Reuters for 3 years as a Product Manager where I worked with clients at Deutsche Bank, Morgan Stanley, Credit Suisse, Nomura, and Rothschild to develop Thomson Reuters MS Excel to MS PowerPoint linking application which enabled users to use Excel data & graphs with linked data in PowerPoint presentations. Although there is a Microsoft Office native equivalent, we were able to develop a product that was more stable and a feature set more tailored to our clients.</Text>
   </div>
 )
 
@@ -26,18 +26,12 @@ const ThomsonReuters = ({ classes, breakpoint }) => {
 
   return small
     ? (
-        <section className={classes.wrapper}>
+        <Section className={classes.wrapper}>
           <div className={classes.textSide}>
-            { title }
+            <span>{ title }</span>
+            <span>{ body }</span>
           </div>
-          <div className={classes.imageSide}>
-            <ResponsiveImage src={iTR} className={classes.logo} alt='logo' />
-          </div>
-          <div className={classes.textSide}>
-            { body }
-          </div>
-
-        </section>
+        </Section>
       )
     : (
         <section className={classes.wrapper}>
@@ -59,8 +53,8 @@ const styles = theme => ({
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
-    boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-    backgroundColor: 'transparent',
+    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
+    // backgroundColor: 'transparent',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
     }
@@ -80,7 +74,7 @@ const styles = theme => ({
   textSide: {
     // backgroundColor: 'purple',
     flexBasis: '55%',
-    padding: '4rem 4rem 2rem 4rem',
+    // padding: '4rem 4rem 2rem 4rem',
   },
 })
 

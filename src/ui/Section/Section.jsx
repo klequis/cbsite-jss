@@ -11,80 +11,34 @@ const shadowStyle = {
 
 const Section = (props) => {
 
-  const {
-    breakpoint,
-    children,
-    classes,
-    image,
-    imageSide='left',
-    shadow
-  } = props
+  const { children, classes, breakpoint } = props
 
-  const side = (breakpoint === 'xs' || breakpoint === 'sm') ? 'right' : imageSide
-  console.log('side', side);
+  console.log('breakpoint', breakpoint)
 
-  if (side === 'left') {
-    return (
-      <div
-        className={classes.wrapper}
-        elevation={0}
-        style={shadow ? shadowStyle : {}}
-      >
-        <div className={classes.imageSideStyle}>
-          <ResponsiveImage src={image} alt='carl teaching' />
-        </div>
-        <div className={classes.textSideStyle}>
-          {children}
-        </div>
-      </div>
-    )
-  }
   return (
-    <section
-      className={classes.wrapper}
-      elevation={0}
-      style={shadow ? shadowStyle : {}}
-    >
-      <div className={classes.textSideStyle}>
-        {children}
-      </div>
-      <div className={classes.imageSideStyle}>
-        <ResponsiveImage src={image} alt='carl teaching' />
-      </div>
+    <section className={classes.wrapper}>
+      {children}
     </section>
   )
+
 }
 
 const styles = theme => ({
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    margin: 8,
-    minHeight: 100,
-    backgroundColor: 'transparent',
-    [theme.breakpoints.up('md')]: {
-      flexDirection: 'row',
-    }
-  },
-  imageSideStyle: {
-    // backgroundColor: 'orange',
-    flexBasis: '45%',
-    paddingTop: 8,
-    paddingBottom: 8,
-    display: 'flex',
-    alignItems: 'center',
-  },
-  textSideStyle: {
-    // backgroundColor: 'purple',
-    flexBasis: '55%',
-    padding: '4rem 4rem 2rem 4rem',
-    margin: '0 auto',
-    flexShrink: 1,
-    alignSelf: 'center',
-    maxWidth: '64rem',
-    textAlign: 'left',
-  },
+  wrapper: theme.section,
+  x: {
+    // padding: '4rem 4rem 2rem 4rem',
+    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
 
+
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  //   margin: 8,
+  //   minHeight: 100,
+  //   backgroundColor: 'transparent',
+  //   [theme.breakpoints.up('md')]: {
+  //     flexDirection: 'row',
+  //   }
+  },
 })
 
 export default compose(

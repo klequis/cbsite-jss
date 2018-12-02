@@ -10,6 +10,12 @@ const theme = {
     between: breakpoints.between,
     only: breakpoints.only,
   },
+  section: {
+    boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.5)',
+    // paddingTop: '4rem',
+    // paddingBottom: '4rem',
+    backgroundColor: 'red',
+  },
   typography: {
     headings: {
       common: {
@@ -17,7 +23,7 @@ const theme = {
       },
       xs: {
         h1: {
-          fontSize: '2.5rem',
+          fontSize: '4.0rem',
           lineHeight: 1.2,
           fontWeight: 300,
           letterSpacing: '-0.05em',
@@ -47,7 +53,7 @@ const theme = {
           textAlign: 'center',
         },
         subtitle1: {
-          fontSize: '1.375rem',
+          fontSize: '1.775rem',
           lineHeight: 'inherit',
           fontStyle: 'italic',
           marginTop: '-0.65rem',

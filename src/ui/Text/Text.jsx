@@ -36,9 +36,26 @@ const unknown = {
   fontWeight: 'bold',
 }
 
-const Text = ({ children, classes, theme, variant /*, align */ }) => {
+const Text = ({
+  children,
+  classes,
+  className: classNameProp,
+  marginBottom=true,
+  theme,
+  variant
+   /*, align */
+  }) => {
   // console.log('Text: variant', variant)
   // console.log('Text: children', children)
+
+  const clsNames = classNames([
+    classes.imgFluid,
+    classNameProp,
+    classes[variant],
+    {
+      [classes.marginBottom]: !marginBottom,
+    }
+  ])
 
   const Component = getElementForVarient(variant)
 
@@ -56,7 +73,7 @@ const Text = ({ children, classes, theme, variant /*, align */ }) => {
     <Component
       // align={align ? classes[align] : classes.left}
       // className={classNames(classes[variant], classes[alignClassName])}
-      className={classes[variant]}
+      className={clsNames}
     >
       {children}
     </Component>
@@ -69,6 +86,9 @@ const styles = theme => {
   const md = theme.typography.headings.md
 
   return ({
+    marginBottom: {
+      marginBottom: '0 !important',
+    },
     h1: xs.h1,
     h2: xs.h2,
     h3: xs.h3,

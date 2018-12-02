@@ -5,6 +5,7 @@ import iExpress from 'media/new/express.svg'
 import iReact from 'media/new/react.svg'
 import iNode from 'media/new/node.svg'
 import Text from 'ui/Text'
+import Section from 'ui/Section'
 
 const logoStyle = {
   imgFluid: {
@@ -19,7 +20,7 @@ const Skills = (props) => {
   const { classes } = props
 
   return (
-    <div className={classes.wrapper}>
+    <Section className={classes.wrapper}>
       <div className={classes.text}>
         <Text variant='h1'>Carl Becker</Text>
         <Text variant='subtitle1'>MERN Stack Developer</Text>
@@ -34,7 +35,7 @@ const Skills = (props) => {
           <img src={iNode} alt='node js logo' className={classes.logo}/>
         </div>
       </div>
-    </div>
+    </Section>
   )
 
 }
@@ -59,11 +60,11 @@ const styles = theme => {
       justifyContent: 'space-around',
       // eslint-disable-next-line
       justifyContent: 'space-evenly',
-      paddingBottom: '2rem',
+      // paddingBottom: '3rem',
     },
     text: {
       // backgroundColor: 'blue', //tmp
-      padding: '4rem 4rem 2rem 4rem',
+      // padding: '4rem 4rem 2rem 4rem',
     },
     logo: {
       // display: 'block',
@@ -79,8 +80,8 @@ const styles = theme => {
       flexDirection: 'column',
       // justifyContent: 'center',
       alignItems: 'center',
-      paddingLeft: 0,
-      paddingRight: 0,
+      // paddingLeft: 0,
+      // paddingRight: 0,
       [theme.breakpoints.only('xs')]: {
         justifyContent: 'space-between',
       },

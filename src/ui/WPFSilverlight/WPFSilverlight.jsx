@@ -6,6 +6,7 @@ import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
 import iWPF from 'media/new/wpf-smaller.png'
 import iSilverlight from 'media/new/silverlight-smaller.png'
+import Section from 'ui/Section'
 
 const imageStyles = {
   img: {
@@ -48,21 +49,21 @@ const WPFSilverlight = ({ classes, breakpoint }) => {
 
   return small
     ? (
-        <section className={classes.wrapper}>
-          <div className={classes.textSide}>
+        <Section className={classes.wrapper}>
+          <div className={classes.text}>
             { text }
           </div>
-          <div className={classes.imageSide}>
+          <div className={classes.image}>
             { image }
           </div>
-        </section>
+        </Section>
       )
     : (
         <section className={classes.wrapper}>
-          <div className={classes.textSide}>
+          <div className={classes.text}>
             { text }
           </div>
-          <div className={classes.imageSide}>
+          <div className={classes.image}>
             { image }
           </div>
         </section>
@@ -74,26 +75,26 @@ const styles = theme => ({
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
-    boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
+    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
     backgroundColor: 'transparent',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
     }
   },
-  imageSide: {
+  image: {
     // backgroundColor: 'rgb(230, 230, 230)',
     flexBasis: '45%',
     // padding: '0 30px',
-    padding: '0 50px',
+    // padding: '0 50px',
     // maxWidth: 300,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  textSide: {
+  text: {
     // backgroundColor: 'purple',
     flexBasis: '55%',
-    padding: '4rem 4rem 2rem 4rem',
+    // padding: '4rem 4rem 2rem 4rem',
   },
 })
 

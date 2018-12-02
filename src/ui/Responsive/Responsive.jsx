@@ -6,6 +6,7 @@ import Text from 'ui/Text'
 import iResponsive from 'media/new/responsive.svg'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
+import Section from 'ui/Section'
 
 const image = (
   <ResponsiveImage  src={iResponsive} alt='responsive site on multi form factors' />
@@ -25,21 +26,21 @@ const Responsive = ({ classes, breakpoint }) => {
 
   return small
     ? (
-        <section className={classes.wrapper}>
-          <div className={classes.textSide}>
+        <Section>
+          <div className={classes.text}>
             { text }
           </div>
-          <div className={classes.imageSide}>
+          <div className={classes.image}>
             { image }
           </div>
-        </section>
+        </Section>
       )
     : (
         <section className={classes.wrapper}>
-          <div className={classes.imageSide}>
+          <div className={classes.image}>
             { image }
           </div>
-          <div className={classes.textSide}>
+          <div className={classes.text}>
             { text }
           </div>
         </section>
@@ -51,7 +52,7 @@ const styles = theme => ({
   wrapper: {
 
 
-    boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
+
     // backgroundColor: 'transparent',
     // display: 'flex',
     // flexDirection: 'column',
@@ -59,18 +60,19 @@ const styles = theme => ({
       flexDirection: 'row',
     }
   },
-  imageSide: {
-    padding: '0 50px',
+  image: {
+    // padding: '0 50px',
     // flexBasis: '45%',
     // display: 'flex',
     // alignItems: 'center',
     // justifyContent: 'center',
     // backgroundColor: 'rgb(230, 230, 230)',
+    // paddingBottom: '3rem',
   },
-  textSide: {
+  text: {
     // backgroundColor: 'purple',
 
-    padding: '4rem 4rem 2rem 4rem',
+    // padding: '0 4rem 0 4rem',
     // flexBasis: '55%',
   },
 })
