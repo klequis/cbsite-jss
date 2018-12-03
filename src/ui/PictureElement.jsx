@@ -1,29 +1,48 @@
 import React from 'react'
 import injectSheet from 'react-jss'
 import { breakpoints } from 'ui/breakpoints'
+import { green } from 'logger'
 
-const PictureElement = ({ classes, images }) => {
-  console.log(breakpoints)
-  return (
-    <div id='PictureElement-wrapper' className={classes.wrapper}>
-      <picture>
-      <source srcSet={images[0]} media={`(min-width: ${breakpoints.sm}px)`} />
-        <source srcSet={images[1]} media={`(min-width: ${breakpoints.md}px)`} />
-        <source srcSet={images[2]} media={`(min-width: ${breakpoints.lg}px)`} />
-        <img srcSet={images[2]} className={classes.fluid} alt="MDN" />
-      </picture>
-    </div>
-  )
+class PictureElement extends React.Component { // make pure?
+  componentDidMount() {
+    // c.f. https://github.com/scottjehl/picturefill/pull/556
+    let picturefill
+    try {
+        picturefill = require('picturefill')
+    } catch (x) {
+        return
+    }
+
+    if (picturefill) {
+        picturefill() // browser
+    }
+    // else node
 }
 
-/*
+  render() {
+    const { classes, images } = this.props
+    // console.log(breakpoints)
+    green('images', images)
+    return (
+      <div id='PictureElement-wrapper' className={classes.wrapper}>
+        <picture>
+          {/* xs */}
+          <source srcSet={images.xs} media={`(max-width: ${breakpoints.sm - 1}px)`} />
+          {/* sm */}
+          <source srcSet={images.sm} media={`(max-width: ${breakpoints.md - 1}px)`} />
+          {/* md */}
+          <source srcSet={images.md} media={`(max-width: ${breakpoints.lg - 1}px)`} />
+          {/* lg */}
+          <source srcSet={images.lg} media={`(max-width: ${breakpoints.xl - 1}px)`} />
+          {/* xl */}
+          <source srcSet={images.xl} media={`(min-width: ${breakpoints.xl - 1}px)`} />
+          <img srcSet={images.md} className={classes.fluid} alt="MDN" />
+        </picture>
+      </div>
+    )
+  }
 
-<source srcSet={images[0]} media={`(min-width: ${breakpoints.sm}px)`} />
-        <source srcSet={images[1]} media={`(min-width: ${breakpoints.md}px)`} />
-        <source srcSet={images[2]} media={`(min-width: ${breakpoints.lg}px)`} />
-        <img srcSet={images[2]} className={classes.fluid} alt="MDN" />
-
-*/
+}
 
 const styles = theme => ({
   wrapper: {

@@ -4,7 +4,7 @@ import injectSheet from 'react-jss'
 import Text from 'ui/Text'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
-import iCacf from 'media/new/cacf.png'
+import iCacf from 'media/cacf.png'
 import Section from 'ui/Section'
 
 const text = (

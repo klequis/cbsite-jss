@@ -1,8 +1,8 @@
 import React from 'react'
 import { compose } from 'recompose'
 import injectSheet from 'react-jss'
-import iWPF from 'media/new/wpf-smaller.png'
-import iSilverlight from 'media/new/silverlight-smaller.png'
+import iWPF from 'media/wpf-smaller.png'
+import iSilverlight from 'media/silverlight-smaller.png'
 import iMeetup01 from 'media/meetup01.jpg'
 import PictureElement from 'ui/PictureElement'
 

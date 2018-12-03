@@ -1,9 +1,9 @@
 import React from 'react'
 import injectSheet from 'react-jss'
-import iMongo from 'media/new/mongodb.svg'
-import iExpress from 'media/new/express.svg'
-import iReact from 'media/new/react.svg'
-import iNode from 'media/new/node.svg'
+import iMongo from 'media/mongodb.svg'
+import iExpress from 'media/express.svg'
+import iReact from 'media/react.svg'
+import iNode from 'media/node.svg'
 import Text from 'ui/Text'
 import Section from 'ui/Section'
 

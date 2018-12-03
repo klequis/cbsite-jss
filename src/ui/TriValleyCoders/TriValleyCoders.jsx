@@ -2,14 +2,13 @@ import React from 'react'
 import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import Text from 'ui/Text'
-import iMeetup01 from 'media/meetup01.jpg'
 import iMeetup0101 from 'media/meetup01.01.jpg'
 import iMeetup0102 from 'media/meetup01.02.jpg'
 import iMeetup0103 from 'media/meetup01.03.jpg'
+import iMeetup0104 from 'media/meetup01.04.jpg'
+import iMeetup0105 from 'media/meetup01.05.jpg'
 import withBreakpoint from 'ui/withBreakpoint'
-import ResponsiveImage from 'ui/ResponsiveImage'
 import Section from 'ui/Section'
-// import { SizeMe } from 'react-sizeme'
 import ContainerDimensions from 'react-container-dimensions'
 import PictureElement from 'ui/PictureElement'
 import { yellow } from 'logger'
@@ -27,7 +26,14 @@ const Image = (props) => {
   yellow('ratio', `${props.width / props.height} - width: ${props.width}`)
   return (
     <div className={props.className}>
-      <PictureElement images={[iMeetup0101, iMeetup0102, iMeetup0103]} alt='prople at meeting around conference table' />
+      <PictureElement
+        images={{
+          xs: iMeetup0101,
+          sm: iMeetup0102,
+          md: iMeetup0103,
+          lg: iMeetup0104,
+          xl: iMeetup0105,
+        }} alt='prople at meeting around conference table' />
     </div>
   )
 }

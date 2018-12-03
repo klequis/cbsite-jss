@@ -4,7 +4,7 @@ import injectSheet from 'react-jss'
 import Text from 'ui/Text'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
-import iHknc from 'media/new/hknc-1.png'
+import iHknc from 'media/hknc-1.png'
 import Section from 'ui/Section'
 
 

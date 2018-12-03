@@ -13,9 +13,9 @@ import WPFSilverlight from 'ui/WPFSilverlight'
 import ThePast from 'ui/ThePast'
 import Breakpoints from 'ui/Breakpoint'
 
-const Home = (props) => {
+const Home = ({ classes }) => {
   return (
-    <div>
+    <div className={classes.wrapper}>
       <Breakpoints />
       <MERNSkills />
       <Responsive />
@@ -33,6 +33,10 @@ const Home = (props) => {
 }
 
 const styles = {
+  wrapper: {
+    maxWidth: 1080,
+    margin: 'auto',
+  },
 }
 
 export default injectSheet(styles)(Home)

@@ -4,8 +4,8 @@ import injectSheet from 'react-jss'
 import Text from 'ui/Text'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
-import iWPF from 'media/new/wpf-smaller.png'
-import iSilverlight from 'media/new/silverlight-smaller.png'
+import iWPF from 'media/wpf-smaller.png'
+import iSilverlight from 'media/silverlight-smaller.png'
 import Section from 'ui/Section'
 
 const text = (
