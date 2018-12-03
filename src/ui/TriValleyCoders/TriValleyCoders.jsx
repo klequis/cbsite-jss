@@ -3,15 +3,16 @@ import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import Text from 'ui/Text'
 import iMeetup01 from 'media/meetup01.jpg'
+import iMeetup0101 from 'media/meetup01.01.jpg'
+import iMeetup0102 from 'media/meetup01.02.jpg'
+import iMeetup0103 from 'media/meetup01.03.jpg'
 import withBreakpoint from 'ui/withBreakpoint'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import Section from 'ui/Section'
-
-const image = (
-  <div>
-    <ResponsiveImage src={iMeetup01} alt='prople at meeting around conference table' />
-  </div>
-)
+// import { SizeMe } from 'react-sizeme'
+import ContainerDimensions from 'react-container-dimensions'
+import PictureElement from 'ui/PictureElement'
+import { yellow } from 'logger'
 
 const text = (
   <div>
@@ -21,8 +22,20 @@ const text = (
   </div>
 )
 
+const Image = (props) => {
+  // console.log('props', props)
+  yellow('ratio', `${props.width / props.height} - width: ${props.width}`)
+  return (
+    <div className={props.className}>
+      <PictureElement images={[iMeetup0101, iMeetup0102, iMeetup0103]} alt='prople at meeting around conference table' />
+    </div>
+  )
+}
+
 const TriValleyCoders = ({ classes, breakpoint }) => {
+
   const small = (breakpoint === 'xs' || breakpoint === 'sm')
+
   return (
     <Section>
       {
@@ -33,7 +46,9 @@ const TriValleyCoders = ({ classes, breakpoint }) => {
                   { text }
                 </div>
                 <div className={classes.image}>
-                  { image }
+                  <Image
+                    className={classes.image}
+                  />
                 </div>
               </div>
             )
@@ -42,9 +57,12 @@ const TriValleyCoders = ({ classes, breakpoint }) => {
                 <div className={classes.text}>
                   { text }
                 </div>
-                <div className={classes.image}>
-                  { image }
-                </div>
+                <ContainerDimensions>
+                  <Image
+                    className={classes.image}
+                  />
+                </ContainerDimensions>
+
               </div>
             )
       }
@@ -54,32 +72,26 @@ const TriValleyCoders = ({ classes, breakpoint }) => {
 
 const styles = theme => ({
   wrapper: {
-
-    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.5)',
-    // backgroundColor: 'transparent',
-
-    // display: 'flex',
-    // flexDirection: 'column',
     [theme.breakpoints.up('md')]: {
-      flexDirection: 'row',
+      display: 'flex',
+      // minHeight: 300,
     }
   },
   image: {
-    // backgroundColor: 'red',
-
-    // display: 'flex',
-    // flexBasis: '45%',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    // paddingBottom: '3em',
+    marginTop: '1.5rem',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'green',
+      margin: 0,
+      flexBasis: '50%',
+      flexShrink: 0,
+    }
   },
   text: {
-    // backgroundColor: 'purple',
-
-    // padding: '4rem 3rem 2rem 3rem',
-    // flexBasis: '55%',
-    // padding: '4rem 4rem 2rem 4rem',
+    padding: '0 2rem',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'blue',
+      flexBasis: '50%',
+    }
   },
 })
 

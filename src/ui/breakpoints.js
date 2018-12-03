@@ -24,3 +24,7 @@ export const getKeyForValue = (width) => {
   }
   return key
 }
+
+export const getValueForKey = (key) => {
+  return breakpoints[key]
+}

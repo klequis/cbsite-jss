@@ -27,54 +27,52 @@ const ThomsonReuters = ({ classes, breakpoint }) => {
   return small
     ? (
         <Section className={classes.wrapper}>
-          <div className={classes.textSide}>
+          <div className={classes.text}>
             <span>{ title }</span>
             <span>{ body }</span>
           </div>
         </Section>
       )
     : (
-        <section className={classes.wrapper}>
-          <div className={classes.textSide}>
+        <Section className={classes.wrapper}>
+          <div className={classes.text}>
             { title }
-          </div>
-          <div className={classes.textSide}>
             { body }
           </div>
-          <div className={classes.imageSide}>
+          <div className={classes.image}>
             <ResponsiveImage src={iTR} alt='logo' />
           </div>
 
-        </section>
+        </Section>
       )
 }
 
 const styles = theme => ({
   wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-    // backgroundColor: 'transparent',
     [theme.breakpoints.up('md')]: {
-      flexDirection: 'row',
-    }
+      display: 'flex',
+    },
   },
   logo: {
     maxWidth: 200,
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'green',
+      flexBasis: '50%',
+      flexShrink: 0,
+      // flexGrow: 1,
+    }
   },
-  imageSide: {
-    // backgroundColor: 'red',
-    flexBasis: '45%',
-    // padding: '0 30px',
-    // maxWidth: 300,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+  image: {
   },
-  textSide: {
-    // backgroundColor: 'purple',
-    flexBasis: '55%',
-    // padding: '4rem 4rem 2rem 4rem',
+  text: {
+    padding: '0 2rem',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'blue',
+      padding: 0,
+      flexBasis: '50%',
+      // flexGrow: 1,
+      flexShrink: 0,
+    }
   },
 })
 

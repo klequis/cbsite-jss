@@ -15,7 +15,7 @@ const text = (
   <div>
     <Text variant='subtitle2'>Once Upon A Time</Text>
     <Text variant='h2'>Dressage Trainer & Instructor</Text>
-    <Text variant='body1'>I fell in love with horses when I was 10 years old.</Text>
+    <Text variant='subtitle3' >I fell in love with horses when I was 10 years old.</Text>
   </div>
 )
 
@@ -35,42 +35,36 @@ const Responsive = ({ classes, breakpoint }) => {
         </Section>
       )
     : (
-        <section className={classes.wrapper}>
+        <Section className={classes.wrapper}>
           <div className={classes.image}>
             { image }
           </div>
           <div className={classes.text}>
             { text }
           </div>
-        </section>
+        </Section>
       )
 }
 
 
 const styles = theme => ({
   wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-    // backgroundColor: 'transparent',
     [theme.breakpoints.up('md')]: {
-      flexDirection: 'row',
-    }
+      display: 'flex',
+    },
   },
   image: {
-    // backgroundColor: 'rgb(230, 230, 230)',
-    flexBasis: '45%',
-    // padding: '0 50px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    // backgroundImage: `url(${iRiding})`,
-    // backgroundRepeat: 'no-repeat',
-    // backgroundSize: 'contain',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'green',
+      flexBasis: '50%',
+    }
   },
   text: {
-    flexBasis: '55%',
-    // padding: '4rem 4rem 2rem 4rem',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'blue',
+      padding: 0,
+      flexBasis: '50%',
+    }
   },
 })
 

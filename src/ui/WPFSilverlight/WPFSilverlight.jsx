@@ -8,33 +8,6 @@ import iWPF from 'media/new/wpf-smaller.png'
 import iSilverlight from 'media/new/silverlight-smaller.png'
 import Section from 'ui/Section'
 
-const imageStyles = {
-  img: {
-    display: 'flex',
-  },
-  silverlight: {
-    // backgroundColor: 'red',
-    maxWidth: 200,
-    margin: '0 10px'
-  },
-  wpf: {
-    // backgroundColor: 'green',
-    maxWidth: 410,
-    margin: '0 10px'
-  }
-
-}
-const image = (
-  <div style={imageStyles.img}>
-    <div style={imageStyles.wpf}>
-      <ResponsiveImage src={iWPF} alt='microsoft windows presentation
-      foundation' />
-    </div>
-    <div style={imageStyles.silverlight}>
-      <ResponsiveImage src={iSilverlight} alt='microsoft silverlight' />
-    </div>
-  </div>
-)
 const text = (
   <div>
     <Text variant='h2'>New York City WPF & Silverlight Meetup</Text>
@@ -54,47 +27,66 @@ const WPFSilverlight = ({ classes, breakpoint }) => {
             { text }
           </div>
           <div className={classes.image}>
-            { image }
+            <div className={classes.wpf}>
+                <ResponsiveImage src={iWPF}  alt='microsoft windows presentation foundation' />
+            </div>
+            <div className={classes.silverlight}>
+              <ResponsiveImage src={iSilverlight} alt='microsoft silverlight' />
+            </div>
           </div>
         </Section>
       )
     : (
-        <section className={classes.wrapper}>
+        <Section className={classes.wrapper}>
           <div className={classes.text}>
             { text }
           </div>
           <div className={classes.image}>
-            { image }
+            <div className={classes.wpf}>
+              <ResponsiveImage src={iWPF}  alt='microsoft windows presentation foundation' />
+            </div>
+            <div className={classes.silverlight}>
+              <ResponsiveImage src={iSilverlight} alt='microsoft silverlight' />
+            </div>
           </div>
-        </section>
+        </Section>
       )
 }
 
 
 const styles = theme => ({
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-    backgroundColor: 'transparent',
+  wpf: {
+    maxWidth: 160,
     [theme.breakpoints.up('md')]: {
-      flexDirection: 'row',
+      // width: 10,
     }
   },
+  silverlight: {
+    maxWidth: 80,
+  },
+  wrapper: {
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+    },
+  },
   image: {
-    // backgroundColor: 'rgb(230, 230, 230)',
-    flexBasis: '45%',
-    // padding: '0 30px',
-    // padding: '0 50px',
-    // maxWidth: 300,
+    paddingTop: '1.5rem',
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    // eslint-disable-next-line
+    justifyContent: 'space-evenly',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'green',
+      flexBasis: '50%',
+    }
   },
   text: {
-    // backgroundColor: 'purple',
-    flexBasis: '55%',
-    // padding: '4rem 4rem 2rem 4rem',
+    padding: '0 2rem',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'blue',
+      padding: 0,
+      flexBasis: '50%',
+    }
   },
 })
 

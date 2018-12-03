@@ -11,10 +11,19 @@ const theme = {
     only: breakpoints.only,
   },
   section: {
-    boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.5)',
-    // paddingTop: '4rem',
-    // paddingBottom: '4rem',
-    backgroundColor: 'red',
+    xs: {
+      boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.5)',
+      paddingTop: '4rem',
+      paddingBottom: '4rem',
+      backgroundColor: 'red',
+    },
+    md: {
+      boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.5)',
+      paddingTop: 0,
+      paddingBottom: 0,
+      backgroundColor: 'red',
+    }
+
   },
   typography: {
     headings: {

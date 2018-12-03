@@ -37,6 +37,7 @@ const unknown = {
 }
 
 const Text = ({
+  align,
   children,
   classes,
   className: classNameProp,
@@ -54,7 +55,10 @@ const Text = ({
     classes[variant],
     {
       [classes.marginBottom]: !marginBottom,
-    }
+      [classes.left]: align === 'left',
+      [classes.center]: align === 'center',
+    },
+
   ])
 
   const Component = getElementForVarient(variant)

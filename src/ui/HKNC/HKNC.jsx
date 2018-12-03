@@ -16,7 +16,12 @@ const text = (
   </div>
 )
 
-const HKNC = ({ classes, breakpoint }) => {
+const HKNC = ({ breakpoint, classes, width }) => {
+
+  // console.log('breakpoint', breakpoint)
+  // console.log('width', width)
+
+
 
   const small = (breakpoint === 'xs' || breakpoint === 'sm')
 
@@ -32,45 +37,42 @@ const HKNC = ({ classes, breakpoint }) => {
         </Section>
       )
     : (
-        <section className={classes.wrapper}>
+        <Section className={classes.wrapper}>
           <div className={classes.text}>
             { text }
           </div>
           <div className={classes.image}>
-            <ResponsiveImage src={iHknc} alt='helen keller national center' />
+            <ResponsiveImage src={iHknc} className={classes.logo} alt='helen keller national center' />
           </div>
-        </section>
+        </Section>
       )
 }
 
 
 const styles = theme => ({
   logo: {
-    maxWidth: 210,
+    // maxWidth: 210,
   },
   wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-    backgroundColor: 'transparent',
     [theme.breakpoints.up('md')]: {
-      flexDirection: 'row',
-    }
+      display: 'flex',
+    },
   },
   image: {
-    // backgroundColor: 'rgb(230, 230, 230)',
-    flexBasis: '45%',
-    // padding: '0 30px',
-    // padding: '0 50px',
-    // maxWidth: 300,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: '1.5rem',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'green',
+      padding: 0,
+      flexBasis: '50%',
+    }
   },
   text: {
-    // backgroundColor: 'purple',
-    flexBasis: '55%',
-    // padding: '4rem 4rem 2rem 4rem',
+    padding: '0 2rem',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'blue',
+      padding: 0,
+      flexBasis: '50%',
+    }
   },
 })
 

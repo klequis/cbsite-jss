@@ -11,7 +11,6 @@ const text = (
   <div>
     <Text variant='h2'>Coalition for Asian American Children & Families</Text>
     <Text variant='subtitle2'>Former Board Member</Text>
-    <Text variant='body1'>I served on CACF's board for 3 years.</Text>
   </div>
 )
 
@@ -31,45 +30,39 @@ const CACF = ({ classes, breakpoint }) => {
         </Section>
       )
     : (
-        <section className={classes.wrapper}>
+        <Section className={classes.wrapper}>
           <div className={classes.image}>
-            <ResponsiveImage  src={iCacf} alt='responsive site on multi form factors' />
+            <ResponsiveImage  src={iCacf} className={classes.logo} alt='responsive site on multi form factors' />
           </div>
           <div className={classes.text}>
             { text }
           </div>
-        </section>
+        </Section>
       )
 }
 
 
 const styles = theme => ({
   logo: {
-    maxWidth: 210,
+    // maxWidth: 210,
   },
   wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-    backgroundColor: 'transparent',
     [theme.breakpoints.up('md')]: {
-      flexDirection: 'row',
-    }
+      display: 'flex',
+    },
   },
   image: {
-    // backgroundColor: 'rgb(230, 230, 230)',
-    flexBasis: '45%',
-    // padding: '0 30px',
-    padding: '0 50px',
-    // maxWidth: 300,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'green',
+      flexBasis: '50%',
+    }
   },
   text: {
-    // backgroundColor: 'purple',
-    flexBasis: '55%',
-    // padding: '4rem 4rem 2rem 4rem',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'blue',
+      padding: 0,
+      flexBasis: '50%',
+    }
   },
 })
 

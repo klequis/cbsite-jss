@@ -8,9 +8,7 @@ import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
 import Section from 'ui/Section'
 
-const image = (
-  <ResponsiveImage  src={iResponsive} alt='responsive site on multi form factors' />
-)
+
 const text = (
 <div>
   <Text variant='h2'>Responsive Web Apps</Text>
@@ -31,49 +29,50 @@ const Responsive = ({ classes, breakpoint }) => {
             { text }
           </div>
           <div className={classes.image}>
-            { image }
+            <ResponsiveImage  src={iResponsive} className={classes.img} alt='responsive site on multi form factors' />
           </div>
         </Section>
       )
     : (
-        <section className={classes.wrapper}>
+        <Section className={classes.wrapper}>
           <div className={classes.image}>
-            { image }
+            <ResponsiveImage  src={iResponsive} className={classes.img} alt='responsive site on multi form factors' />
           </div>
           <div className={classes.text}>
             { text }
           </div>
-        </section>
+        </Section>
       )
 }
 
 
 const styles = theme => ({
+  img: {
+    maxWidth: 550,
+  },
   wrapper: {
-
-
-
-    // backgroundColor: 'transparent',
-    // display: 'flex',
-    // flexDirection: 'column',
     [theme.breakpoints.up('md')]: {
-      flexDirection: 'row',
-    }
+      display: 'flex',
+    },
   },
   image: {
-    // padding: '0 50px',
-    // flexBasis: '45%',
-    // display: 'flex',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    // backgroundColor: 'rgb(230, 230, 230)',
-    // paddingBottom: '3rem',
+    padding: '0 1rem',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'green', //tmp
+      padding: 0,
+      flexBasis: '50%',
+      display: 'flex',
+      alignItems: 'center',
+    },
   },
   text: {
-    // backgroundColor: 'purple',
 
-    // padding: '0 4rem 0 4rem',
-    // flexBasis: '55%',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'blue', //tmp
+      flexBasis: '50%',
+      display: 'flex',
+      justifyContent: 'center',
+    },
   },
 })
 

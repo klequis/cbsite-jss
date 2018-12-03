@@ -3,8 +3,9 @@
 
 // Sorted ASC by size. That's important.
 // It can't be configured as it's used statically for propTypes.
-import { breakpointValues } from 'ui/breakpoints'
-import { breakpointKeys } from 'ui/breakpoints'
+import { breakpointValues, breakpointKeys, getValueForKey } from 'ui/breakpoints'
+import { pink } from 'logger'
+
 
 
 // Keep in mind that @media is inclusive by the CSS specification.
@@ -18,8 +19,11 @@ export default function createBreakpoints(breakpoints) {
   } = breakpoints
 
   function up(key) {
-    const value = typeof breakpointValues[key] === 'number' ? breakpointValues[key] : key
-    return `@media (min-width:${value}${unit})`
+
+    const value = typeof key === 'number' ? key : getValueForKey(key)
+    const q = `@media (min-width:${value}${unit})`
+    // pink('createBreakpoints.up', `${key} - ${q}`)
+    return q
   }
 
   function down(key) {
@@ -32,7 +36,9 @@ export default function createBreakpoints(breakpoints) {
     }
 
     const value = typeof upperbound === 'number' && endIndex > 0 ? upperbound : key
-    return `@media (max-width:${value - step / 100}${unit})`
+    const q = `@media (max-width:${value - step / 100}${unit})`
+    // pink('createBreakpoints.up', `${key} - ${q}`)
+    return q
   }
 
   function between(start, end) {
@@ -41,10 +47,10 @@ export default function createBreakpoints(breakpoints) {
       return up(start)
     }
 
-    return (
-      `@media (min-width:${breakpointValues[start]}${unit}) and ` +
-      `(max-width:${breakpointValues[breakpointKeys[endIndex]] - step / 100}${unit})`
-    )
+    const q = `@media (min-width:${breakpointValues[start]}${unit}) and  + (max-width:${breakpointValues[breakpointKeys[endIndex]] - step / 100}${unit})`
+
+    // pink('createBreakpoints.up', `(start:${start}, end:${end}) ${q}`)
+    return q
   }
 
   function only(key) {

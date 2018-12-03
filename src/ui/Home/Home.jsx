@@ -11,10 +11,12 @@ import MERNSkills from 'ui/MERNSkills'
 import RestOfSkills from 'ui/RestOfSkills'
 import WPFSilverlight from 'ui/WPFSilverlight'
 import ThePast from 'ui/ThePast'
+import Breakpoints from 'ui/Breakpoint'
 
 const Home = (props) => {
   return (
     <div>
+      <Breakpoints />
       <MERNSkills />
       <Responsive />
       <TriValleyCoders />

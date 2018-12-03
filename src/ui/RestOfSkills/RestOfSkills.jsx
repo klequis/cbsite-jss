@@ -1,7 +1,6 @@
 import React from 'react'
 import injectSheet from 'react-jss'
 import Text from 'ui/Text'
-import ResponsiveImage from 'ui/ResponsiveImage'
 import iReactRouter from 'media/new/react-router.svg'
 import iRedux from 'media/new/redux.svg'
 import iMUI from 'media/new/material-ui.svg'

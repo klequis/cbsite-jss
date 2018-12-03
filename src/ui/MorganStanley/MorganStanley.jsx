@@ -38,49 +38,38 @@ const MorganStanley = ({ classes, breakpoint }) => {
         </Section>
       )
     : (
-        <section className={classes.wrapper}>
+        <Section className={classes.wrapper}>
           <div className={classes.image}>
             {image}
           </div>
           <div className={classes.text}>
             {title}
+            {body}
           </div>
-        </section>
+        </Section>
       )
 }
 
 const styles = theme => ({
   wrapper: {
-
-    // boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-    // display: 'flex',
-    // flexDirection: 'column',
-    // backgroundColor: 'transparent',
     [theme.breakpoints.up('md')]: {
-      flexDirection: 'row',
-      justifyContent: 'space-between'
-    }
+      display: 'flex',
+    },
   },
   image: {
-
-
-    // padding: '0 100px',
-    maxWidth: 100,
-
-    // flexBasis: '45%',
-    // display: 'flex',
-    // alignItems: 'center',
-    // justifyContent: 'flex-end',
-    // [theme.breakpoints.up('md')]: {
-      // backgroundColor: '#112951',
-    // }
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'green',
+      flexBasis: '50%',
+    }
   },
   text: {
-    // backgroundColor: 'purple',
-    flexBasis: '55%',
-    // padding: '4rem 4rem 2rem 4rem',
+    padding: '0 2rem',
+    [theme.breakpoints.up('md')]: {
+      backgroundColor: 'blue',
+      padding: 0,
+      flexBasis: '50%',
+    }
   },
-
 })
 
 export default compose(

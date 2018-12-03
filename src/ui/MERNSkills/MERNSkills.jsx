@@ -7,23 +7,16 @@ import iNode from 'media/new/node.svg'
 import Text from 'ui/Text'
 import Section from 'ui/Section'
 
-const logoStyle = {
-  imgFluid: {
-    display: 'block',
-    width: '100%',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
-}
+const Skills = ({ classes, breakpoint }) => {
 
-const Skills = (props) => {
-  const { classes } = props
 
   return (
     <Section className={classes.wrapper}>
       <div className={classes.text}>
-        <Text variant='h1'>Carl Becker</Text>
-        <Text variant='subtitle1'>MERN Stack Developer</Text>
+        <div>
+          <Text variant='h1'>Carl Becker</Text>
+          <Text variant='subtitle1'>MERN Stack Developer</Text>
+        </div>
       </div>
       <div className={classes.image}>
         <div className={classes.logoGroup}>
@@ -43,57 +36,44 @@ const Skills = (props) => {
 const styles = theme => {
   return({
     wrapper: {
-      // backgroundColor: 'red', //tmp
-      // backgroundColor: 'transparent',
-      display: 'flex',
-      flexDirection: 'column',
-      // alignItems: 'center',
-      // margin: 8,
-      // width: '100%',
-      // [theme.breakpoints.up('md')]: {
-      //   flexDirection: 'row',
-      // }
+      [theme.breakpoints.up('md')]: {
+        display: 'flex',
+      }
     },
     image: {
-      // backgroundColor: 'green', //tmp
-      display: 'flex',
-      justifyContent: 'space-around',
-      // eslint-disable-next-line
-      justifyContent: 'space-evenly',
-      // paddingBottom: '3rem',
+      [theme.breakpoints.up('md')]: {
+        backgroundColor: 'green',
+        flexBasis: '50%',
+        display: 'flex',
+        justifyContent: 'center',
+      }
     },
     text: {
-      // backgroundColor: 'blue', //tmp
-      // padding: '4rem 4rem 2rem 4rem',
+      [theme.breakpoints.up('md')]: {
+        backgroundColor: 'blue',
+        flexBasis: '50%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }
     },
     logo: {
-      // display: 'block',
-      // width: '60%',
-      // flexBasis: '50%',
-      // margin: 'auto',
       maxHeight: 40,
+      [theme.breakpoints.up('md')]: {
+        maxHeight: 800,
+      },
     },
 
     logoGroup: {
+      backgroundColor: 'purple',
       display: 'flex',
-      // flexFlow: 'row wrap',
-      flexDirection: 'column',
-      // justifyContent: 'center',
-      alignItems: 'center',
-      // paddingLeft: 0,
-      // paddingRight: 0,
-      [theme.breakpoints.only('xs')]: {
-        justifyContent: 'space-between',
-      },
+      flexFlow: 'row wrap',
+      justifyContent: 'space-around',
+      // eslint-disable-next-line
+      justifyContent: 'space-evenly'
     },
 
   })
 }
 
 export default injectSheet(styles)(Skills)
-
-
-/*
-
-
-    */
