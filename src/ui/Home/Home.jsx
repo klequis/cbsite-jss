@@ -34,8 +34,8 @@ const Home = ({ classes }) => {
 
 const styles = {
   wrapper: {
-    maxWidth: 1080,
-    margin: 'auto',
+    // maxWidth: 1080,
+    // margin: 'auto',
   },
 }
 
