@@ -36,12 +36,7 @@ class PictureElement extends React.Component { // make pure?
           <source srcSet={images.lg} media={`(max-width: ${breakpoints.xl - 1}px)`} />
           {/* xl */}
           <source srcSet={images.xl} media={`(min-width: ${breakpoints.xl - 1}px)`} />
-          <img
-            srcSet={images.md}
-            className={classes.fluid}
-            alt="none"
-            // style={{maxHeight: this.props.maxHeight}}
-          />
+          <img srcSet={images.md} className={classes.fluid} alt="MDN" />
         </picture>
       </div>
     )
@@ -53,24 +48,16 @@ const styles = theme => ({
   wrapper: {
     // width: '100%',
     // height: '100%',
-    // height: 300,
     // width: 300,
     backgroundColor: 'orange',
   },
   fluid: {
-    // orig
     display: 'block',
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '100%',
-    // orig
+    // height: '100%',
 
-    // width: '100%',
-    // height: 'auto',
-
-    // height: 'auto',
-    // marginTop: 'auto',
-    // marginBottom: 'auto',
   },
 })
 

@@ -7,9 +7,12 @@ import iMeetup0102 from 'media/meetup01.02.jpg'
 import iMeetup0103 from 'media/meetup01.03.jpg'
 import iMeetup0104 from 'media/meetup01.04.jpg'
 import iMeetup0105 from 'media/meetup01.05.jpg'
+import iMeetup01012 from 'media/meetup01.012.jpg'
+import iSquare from 'media/square.jpg'
 import withBreakpoint from 'ui/withBreakpoint'
 import Section from 'ui/Section'
-import ContainerDimensions from 'react-container-dimensions'
+import ContainerDimensions from
+'react-container-dimensions'
 import PictureElement from 'ui/PictureElement'
 import { yellow } from 'logger'
 
@@ -23,17 +26,23 @@ const text = (
 
 const Image = (props) => {
   // console.log('props', props)
-  yellow('ratio', `${props.width / props.height} - width: ${props.width}`)
+  const { right, bottom, left, width, height} = props
+
+  // yellow('ratio', `${props.width / props.height} - width: ${props.width}`)
+
+  yellow('right - left', right - left )
+
   return (
     <div className={props.className}>
       <PictureElement
+        // maxHeight={300}
         images={{
-          xs: iMeetup0101,
-          sm: iMeetup0102,
-          md: iMeetup0103,
-          lg: iMeetup0104,
-          xl: iMeetup0105,
-        }} alt='prople at meeting around conference table' />
+          xs: iSquare,
+          sm: iSquare,
+          md: iSquare,
+          lg: iSquare,
+          xl: iSquare,
+        }} alt='people at meeting around conference table' />
     </div>
   )
 }
@@ -63,6 +72,9 @@ const TriValleyCoders = ({ classes, breakpoint }) => {
                 <div className={classes.text}>
                   { text }
                 </div>
+                {/* <div className={classes.image}>
+
+                </div> */}
                 <ContainerDimensions>
                   <Image
                     className={classes.image}
@@ -97,6 +109,8 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       backgroundColor: 'blue',
       flexBasis: '50%',
+      // new
+      padding: '3rem 2rem'
     }
   },
 })

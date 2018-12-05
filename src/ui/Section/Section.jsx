@@ -3,7 +3,7 @@ import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import classNames from 'classnames'
 import withBreakpoint from 'ui/withBreakpoint'
-
+import { green } from 'logger'
 
 // const shadowStyle = {
 //   boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
@@ -16,7 +16,6 @@ const Section = (props) => {
     [classes.wrapper],
     className
   ])
-
   return (
     <section className={clsNames}>
       {children}
