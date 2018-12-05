@@ -13,7 +13,7 @@ const image = (
 )
 
 const title = (
-  <Text variant='h2'>Morgan Stanley</Text>
+  <Text variant='h2' align='center'>Morgan Stanley</Text>
 )
 
 const body = (
@@ -24,51 +24,36 @@ const body = (
 )
 
 const MorganStanley = ({ classes, breakpoint }) => {
+  return (
+    <Section className={classes.wrapper}>
+      <div className={classes.text}>
+        <span>{title}</span>
+        <span>{body}</span>
+      </div>
 
-  const small = (breakpoint === 'xs' || breakpoint === 'sm')
-
-  return small
-    ? (
-        <Section className={classes.wrapper}>
-          <div className={classes.text}>
-            <span>{title}</span>
-            <span>{body}</span>
-          </div>
-
-        </Section>
-      )
-    : (
-        <Section className={classes.wrapper}>
-          <div className={classes.image}>
-            {image}
-          </div>
-          <div className={classes.text}>
-            {title}
-            {body}
-          </div>
-        </Section>
-      )
+    </Section>
+  )
 }
 
 const styles = theme => ({
   wrapper: {
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
+    // [theme.breakpoints.up('md')]: {
+    //   display: 'flex',
+    // },
   },
   image: {
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: 'green',
-      flexBasis: '50%',
-    }
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: 'green',
+    //   flexBasis: '50%',
+    // }
   },
   text: {
     padding: '0 2rem',
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: 'blue',
-      padding: 0,
-      flexBasis: '50%',
-    }
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: 'blue',
+    //   padding: 0,
+    //   flexBasis: '50%',
+    // }
   },
 })
 

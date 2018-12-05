@@ -2,24 +2,24 @@ import React from 'react'
 import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import Text from 'ui/Text'
-import iMeetup0101 from 'media/meetup01.01.jpg'
-import iMeetup0102 from 'media/meetup01.02.jpg'
-import iMeetup0103 from 'media/meetup01.03.jpg'
-import iMeetup0104 from 'media/meetup01.04.jpg'
-import iMeetup0105 from 'media/meetup01.05.jpg'
-import iMeetup01012 from 'media/meetup01.012.jpg'
+import iMeetupXS from 'media/meetup-xs.jpg'
+import iMeetupMD from 'media/meetup-md.jpg'
+// import iMeetup0101 from 'media/meetup01.01.jpg'
+// import iMeetup0102 from 'media/meetup01.02.jpg'
+// import iMeetup0103 from 'media/meetup01.03.jpg'
+// import iMeetup0104 from 'media/meetup01.04.jpg'
+// import iMeetup0105 from 'media/meetup01.05.jpg'
+// import iMeetup01012 from 'media/meetup01.012.jpg'
 import iSquare from 'media/square.jpg'
 import withBreakpoint from 'ui/withBreakpoint'
 import Section from 'ui/Section'
-import ContainerDimensions from
-'react-container-dimensions'
 import PictureElement from 'ui/PictureElement'
 import { yellow } from 'logger'
 
 const text = (
   <div>
-    <Text variant='h2'>TriValley Coders</Text>
-    <Text variant='subtitle2'>Founder</Text>
+    <Text variant='h2' align='center'>TriValley Coders</Text>
+    <Text variant='subtitle2' align='center'>Founder</Text>
     <Text variant='body1'>TriValley Coders was founded in 2016 as a community of software developers helping each other learn to code. Over the past 2.5 years it has evolved into a class-like format with mentors helping attendees to lean specific MERN Stack skills. Since inception, TriValley Coders has held more than 160 events.</Text>
   </div>
 )
@@ -37,9 +37,9 @@ const Image = (props) => {
       <PictureElement
         // maxHeight={300}
         images={{
-          xs: iSquare,
-          sm: iSquare,
-          md: iSquare,
+          xs: iMeetupXS,
+          sm: iMeetupXS,
+          md: iMeetupMD,
           lg: iSquare,
           xl: iSquare,
         }} alt='people at meeting around conference table' />
@@ -48,70 +48,49 @@ const Image = (props) => {
 }
 
 const TriValleyCoders = ({ classes, breakpoint }) => {
-
-  const small = (breakpoint === 'xs' || breakpoint === 'sm')
-
   return (
     <Section>
-      {
-        small
-          ? (
-              <div className={classes.wrapper}>
-                <div className={classes.text}>
-                  { text }
-                </div>
-                <div className={classes.image}>
-                  <Image
-                    className={classes.image}
-                  />
-                </div>
-              </div>
-            )
-          : (
-              <div className={classes.wrapper}>
-                <div className={classes.text}>
-                  { text }
-                </div>
-                {/* <div className={classes.image}>
-
-                </div> */}
-                <ContainerDimensions>
-                  <Image
-                    className={classes.image}
-                  />
-                </ContainerDimensions>
-
-              </div>
-            )
-      }
+      <div className={classes.wrapper}>
+        <div className={classes.text}>
+          { text }
+        </div>
+        <div className={classes.image}>
+          <Image
+            className={classes.image}
+          />
+        </div>
+      </div>
     </Section>
   )
 }
 
 const styles = theme => ({
   wrapper: {
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-      // minHeight: 300,
-    }
+    // [theme.breakpoints.up('md')]: {
+    //   display: 'flex',
+    //   // minHeight: 300,
+    // }
   },
   image: {
     marginTop: '1.5rem',
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: 'green',
-      margin: 0,
-      flexBasis: '50%',
-      flexShrink: 0,
-    }
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: 'green',
+    //   margin: 0,
+    //   flexBasis: '50%',
+    //   flexShrink: 0,
+    // }
   },
   text: {
     padding: '0 2rem',
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: 'blue',
-      flexBasis: '50%',
-      // new
-      padding: '3rem 2rem'
-    }
+    [theme.breakpoints.up('lg')]: {
+      padding: '0 20%',
+    },
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: 'blue',
+    //   flexBasis: '50%',
+    //   // new
+    //   padding: '3rem 2rem'
+    // }
   },
 })
 

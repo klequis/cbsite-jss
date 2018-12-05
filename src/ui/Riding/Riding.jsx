@@ -13,58 +13,45 @@ const image = (
 )
 const text = (
   <div>
-    <Text variant='subtitle2'>Once Upon A Time</Text>
-    <Text variant='h2'>Dressage Trainer & Instructor</Text>
-    <Text variant='subtitle3' >I fell in love with horses when I was 10 years old.</Text>
+    <Text variant='subtitle2' align='center'>Once Upon A Time</Text>
+    <Text variant='h2' align='center'>Dressage Trainer & Instructor</Text>
+    <Text variant='subtitle3' align='center'>I fell in love with horses when I was 10 years old.</Text>
   </div>
 )
 
 const Responsive = ({ classes, breakpoint }) => {
 
-  const small = (breakpoint === 'xs' || breakpoint === 'sm')
 
-  return small
-    ? (
-        <Section className={classes.wrapper}>
-          <div className={classes.text}>
-            { text }
-          </div>
-          <div className={classes.image}>
-            { image }
-          </div>
-        </Section>
-      )
-    : (
-        <Section className={classes.wrapper}>
-          <div className={classes.image}>
-            { image }
-          </div>
-          <div className={classes.text}>
-            { text }
-          </div>
-        </Section>
-      )
+  return (
+    <Section className={classes.wrapper}>
+      <div className={classes.text}>
+        { text }
+      </div>
+      <div className={classes.image}>
+        { image }
+      </div>
+    </Section>
+  )
 }
-
 
 const styles = theme => ({
   wrapper: {
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
+    // [theme.breakpoints.up('md')]: {
+    //   display: 'flex',
+    // },
   },
   image: {
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: 'green',
-      flexBasis: '50%',
-    }
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: 'green',
+    //   flexBasis: '50%',
+    // }
   },
   text: {
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: 'blue',
-      padding: 0,
-      flexBasis: '50%',
-    }
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: 'blue',
+    //   padding: 0,
+    //   flexBasis: '50%',
+    // }
   },
 })
 

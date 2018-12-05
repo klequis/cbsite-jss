@@ -54,7 +54,7 @@ const Text = ({
     classNameProp,
     classes[variant],
     {
-      [classes.marginBottom]: !marginBottom,
+      [classes.marginBottom]: marginBottom,
       [classes.left]: align === 'left',
       [classes.center]: align === 'center',
     },
@@ -91,7 +91,7 @@ const styles = theme => {
 
   return ({
     marginBottom: {
-      marginBottom: '0 !important',
+      marginBottom: '1em !important',
     },
     h1: xs.h1,
     h2: xs.h2,

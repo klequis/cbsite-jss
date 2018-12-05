@@ -10,7 +10,7 @@ import Section from 'ui/Section'
 
 const title = (
   <div>
-    <Text variant='h2'>Thomson Reuters</Text>
+    <Text variant='h2' align='center'>Thomson Reuters</Text>
   </div>
 )
 
@@ -22,57 +22,42 @@ const body = (
 
 const ThomsonReuters = ({ classes, breakpoint }) => {
 
-  const small = (breakpoint === 'xs' || breakpoint === 'sm')
-
-  return small
-    ? (
-        <Section className={classes.wrapper}>
-          <div className={classes.text}>
-            <span>{ title }</span>
-            <span>{ body }</span>
-          </div>
-        </Section>
-      )
-    : (
-        <Section className={classes.wrapper}>
-          <div className={classes.text}>
-            { title }
-            { body }
-          </div>
-          <div className={classes.image}>
-            <ResponsiveImage src={iTR} alt='logo' />
-          </div>
-
-        </Section>
-      )
+  return (
+    <Section className={classes.wrapper}>
+      <div className={classes.text}>
+        <span>{ title }</span>
+        <span>{ body }</span>
+      </div>
+    </Section>
+  )
 }
 
 const styles = theme => ({
   wrapper: {
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
+    // [theme.breakpoints.up('md')]: {
+    //   display: 'flex',
+    // },
   },
   logo: {
     maxWidth: 200,
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: 'green',
-      flexBasis: '50%',
-      flexShrink: 0,
-      // flexGrow: 1,
-    }
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: 'green',
+    //   flexBasis: '50%',
+    //   flexShrink: 0,
+    //   // flexGrow: 1,
+    // }
   },
   image: {
   },
   text: {
     padding: '0 2rem',
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: 'blue',
-      padding: 0,
-      flexBasis: '50%',
-      // flexGrow: 1,
-      flexShrink: 0,
-    }
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: 'blue',
+    //   padding: 0,
+    //   flexBasis: '50%',
+    //   // flexGrow: 1,
+    //   flexShrink: 0,
+    // }
   },
 })
 

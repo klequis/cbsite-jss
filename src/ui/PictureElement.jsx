@@ -22,12 +22,12 @@ class PictureElement extends React.Component { // make pure?
   render() {
     const { classes, images } = this.props
     // console.log(breakpoints)
-    green('images', images)
+    // green('images', images)
     return (
       <div id='PictureElement-wrapper' className={classes.wrapper}>
         <picture>
           {/* xs */}
-          <source srcSet={images.xs} media={`(max-width: ${breakpoints.sm - 1}px)`} />
+          <source srcSet={images.xs} media={`(max-width: ${breakpoints.sm}px)`} />
           {/* sm */}
           <source srcSet={images.sm} media={`(max-width: ${breakpoints.md - 1}px)`} />
           {/* md */}

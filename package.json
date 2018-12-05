@@ -49,6 +49,7 @@
     "react-dev-utils": "^6.1.1",
     "react-dom": "^16.6.3",
     "react-jss": "^8.6.1",
+    "react-responsive-picture": "^3.1.0",
     "react-sizeme": "^2.5.2",
     "react-sizes": "^1.0.4",
     "react-styleguidist": "^8.0.6",

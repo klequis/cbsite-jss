@@ -11,38 +11,25 @@ import Section from 'ui/Section'
 
 const text = (
 <div>
-  <Text variant='h2'>Responsive Web Apps</Text>
-  <Text variant='subtitle2'>Responsive Web Developer</Text>
-  <Text variant='subtitle2'> Responsive CSS</Text>
-  <Text variant='subtitle2'>Responsive Web Apps</Text>
+  <Text variant='h2' align='center'>Responsive Web Apps</Text>
+  <Text variant='subtitle2' align='center'>Responsive Web Developer</Text>
+  <Text variant='subtitle2' align='center'> Responsive CSS</Text>
+  <Text variant='subtitle2' align='center'>Responsive Web Apps</Text>
 </div>
 )
 
 const Responsive = ({ classes, breakpoint }) => {
 
-  const small = (breakpoint === 'xs' || breakpoint === 'sm')
-
-  return small
-    ? (
-        <Section>
-          <div className={classes.text}>
-            { text }
-          </div>
-          <div className={classes.image}>
-            <ResponsiveImage  src={iResponsive} className={classes.img} alt='responsive site on multi form factors' />
-          </div>
-        </Section>
-      )
-    : (
-        <Section className={classes.wrapper}>
-          <div className={classes.image}>
-            <ResponsiveImage  src={iResponsive} className={classes.img} alt='responsive site on multi form factors' />
-          </div>
-          <div className={classes.text}>
-            { text }
-          </div>
-        </Section>
-      )
+  return (
+    <Section className={classes.wrapper} background='dark'>
+      <div className={classes.text}>
+        { text }
+      </div>
+      <div className={classes.image}>
+        <ResponsiveImage  src={iResponsive} className={classes.img} alt='responsive site on multi form factors' />
+      </div>
+    </Section>
+  )
 }
 
 
@@ -51,28 +38,34 @@ const styles = theme => ({
     maxWidth: 550,
   },
   wrapper: {
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
+    /// backgroundColor: '#303030',
+    // backgroundColor: '#2b3137',
+    color: 'white',
+    // [theme.breakpoints.up('md')]: {
+    //   display: 'flex',
+    // },
   },
   image: {
     padding: '0 1rem',
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: 'green', //tmp
-      padding: 0,
-      flexBasis: '50%',
-      display: 'flex',
-      alignItems: 'center',
-    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: 60,
+    }
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: 'green', //tmp
+    //   padding: 0,
+    //   flexBasis: '50%',
+    //   display: 'flex',
+    //   alignItems: 'center',
+    // },
   },
   text: {
 
-    [theme.breakpoints.up('md')]: {
-      backgroundColor: 'blue', //tmp
-      flexBasis: '50%',
-      display: 'flex',
-      justifyContent: 'center',
-    },
+    // [theme.breakpoints.up('md')]: {
+    //   backgroundColor: 'blue', //tmp
+    //   flexBasis: '50%',
+    //   display: 'flex',
+    //   justifyContent: 'center',
+    // },
   },
 })
 

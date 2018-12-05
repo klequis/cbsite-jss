@@ -16,9 +16,9 @@ const ResponsiveImage = ({ alt, classes, src, className }) => {
 const styles = {
   imgFluid: {
     display: 'block',
-    width: '100%',
-    marginRight: 'auto',
     marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '100%',
   },
 }
 

@@ -11,17 +11,28 @@ const theme = {
     only: breakpoints.only,
   },
   section: {
+    colors: {
+      background: {
+        light: 'white',
+        // dark: '#0072CE'
+        dark: '#005ca8'
+      }
+    },
+    shadow: {
+      light: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.15)',
+      dark: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.075)',
+    },
     xs: {
-      boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.5)',
+      // backgroundColor: 'red',
+      boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.15)',
       paddingTop: '4rem',
       paddingBottom: '4rem',
-      backgroundColor: 'red',
     },
     md: {
       boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.5)',
-      paddingTop: 0,
-      paddingBottom: 0,
-      backgroundColor: 'red',
+      paddingTop: '4rem',
+      paddingBottom: '4rem',
+      // backgroundColor: 'red',
     }
 
   },

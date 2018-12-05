@@ -72,7 +72,7 @@ export const styles = theme => {
         backgroundColor: 'orange',
       },
       [theme.breakpoints.only('xl')]: {
-        backgroundColor: 'purple',
+        // backgroundColor: 'purple',
       },
     },
     positionFixedTop: {
