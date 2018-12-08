@@ -4,6 +4,7 @@ import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import withTheme from 'ui/withTheme'
 import classNames from 'classnames'
+import { green } from '../../logger/index';
 
 const variants = [
   'h1',
@@ -60,7 +61,7 @@ const Text = ({
     },
 
   ])
-
+  // green('Text: clsNames', clsNames)
   const Component = getElementForVarient(variant)
 
   if (!variants.includes(variant)) {

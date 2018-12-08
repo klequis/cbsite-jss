@@ -1,5 +1,6 @@
 import React from 'react'
 import injectSheet from 'react-jss'
+import classNames from 'classnames'
 import { breakpoints } from 'ui/breakpoints'
 import { green } from 'logger'
 
@@ -20,9 +21,19 @@ class PictureElement extends React.Component { // make pure?
 }
 
   render() {
-    const { classes, images } = this.props
+    const {
+      classes,
+      className: classNameProp,
+      images
+    } = this.props
     // console.log(breakpoints)
     // green('images', images)
+    const clsNames = classNames([
+      classes.fluid,
+      classNameProp
+    ])
+    green('classNameProp', classNameProp)
+    green('clsNames', clsNames)
     return (
       <div id='PictureElement-wrapper' className={classes.wrapper}>
         <picture>
@@ -38,7 +49,7 @@ class PictureElement extends React.Component { // make pure?
           <source srcSet={images.xl} media={`(min-width: ${breakpoints.xl - 1}px)`} />
           <img
             srcSet={images.md}
-            className={classes.fluid}
+            className={clsNames}
             alt="none"
             // style={{maxHeight: this.props.maxHeight}}
           />
@@ -51,26 +62,13 @@ class PictureElement extends React.Component { // make pure?
 
 const styles = theme => ({
   wrapper: {
-    // width: '100%',
-    // height: '100%',
-    // height: 300,
-    // width: 300,
-    backgroundColor: 'orange',
+    // backgroundColor: 'orange',
   },
   fluid: {
-    // orig
     display: 'block',
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '100%',
-    // orig
-
-    // width: '100%',
-    // height: 'auto',
-
-    // height: 'auto',
-    // marginTop: 'auto',
-    // marginBottom: 'auto',
   },
 })
 

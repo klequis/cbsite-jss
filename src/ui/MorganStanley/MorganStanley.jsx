@@ -2,15 +2,8 @@ import React from 'react'
 import injectSheet from 'react-jss'
 import Text from 'ui/Text'
 import { compose } from 'recompose'
-import ResponsiveImage from 'ui/ResponsiveImage'
-// import iMS from 'media/morgan-stanley.white.01.01.png'
-import iMS from 'media/ms01-narrow.png'
 import withBreakpoint from 'ui/withBreakpoint'
 import Section from 'ui/Section'
-
-const image = (
-  <ResponsiveImage src={iMS} alt='logo' />
-)
 
 const title = (
   <Text variant='h2' align='center'>Morgan Stanley</Text>
@@ -36,24 +29,11 @@ const MorganStanley = ({ classes, breakpoint }) => {
 }
 
 const styles = theme => ({
-  wrapper: {
-    // [theme.breakpoints.up('md')]: {
-    //   display: 'flex',
-    // },
-  },
-  image: {
-    // [theme.breakpoints.up('md')]: {
-    //   backgroundColor: 'green',
-    //   flexBasis: '50%',
-    // }
-  },
   text: {
     padding: '0 2rem',
-    // [theme.breakpoints.up('md')]: {
-    //   backgroundColor: 'blue',
-    //   padding: 0,
-    //   flexBasis: '50%',
-    // }
+    [theme.breakpoints.up('md')]: {
+      padding: '0 11rem',
+    }
   },
 })
 

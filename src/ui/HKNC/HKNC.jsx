@@ -4,7 +4,7 @@ import injectSheet from 'react-jss'
 import Text from 'ui/Text'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
-import iHknc from 'media/hknc-1.png'
+import iHknc from 'media/logos/hknc-1.png'
 import Section from 'ui/Section'
 
 
@@ -17,9 +17,6 @@ const text = (
 )
 
 const HKNC = ({ breakpoint, classes, width }) => {
-
-  // console.log('breakpoint', breakpoint)
-  // console.log('width', width)
 
   return  (
     <Section className={classes.wrapper}>
@@ -36,7 +33,10 @@ const HKNC = ({ breakpoint, classes, width }) => {
 
 const styles = theme => ({
   logo: {
-    maxWidth: 210,
+    maxWidth: '15rem',
+    [theme.breakpoints.up('md')]: {
+      maxWidth: '20rem',
+    }
   },
   wrapper: {
     // [theme.breakpoints.up('md')]: {
@@ -53,6 +53,9 @@ const styles = theme => ({
   },
   text: {
     padding: '0 2rem',
+    [theme.breakpoints.up('md')]: {
+      padding: '0 11rem',
+    }
     // [theme.breakpoints.up('md')]: {
     //   backgroundColor: 'blue',
     //   padding: 0,

@@ -4,8 +4,8 @@ import injectSheet from 'react-jss'
 import Text from 'ui/Text'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
-import iWPF from 'media/wpf-smaller.png'
-import iSilverlight from 'media/silverlight-smaller.png'
+import iWPF from 'media/logos/wpf-smaller.png'
+import iSilverlight from 'media/logos/silverlight-smaller.png'
 import Section from 'ui/Section'
 
 const text = (
@@ -16,12 +16,9 @@ const text = (
   </div>
 )
 
-const WPFSilverlight = ({ classes, breakpoint }) => {
-
-  const small = (breakpoint === 'xs' || breakpoint === 'sm')
-
+const WPFSilverlight = ({ classes }) => {
   return (
-    <Section className={classes.wrapper}>
+    <Section>
       <div className={classes.text}>
         { text }
       </div>
@@ -40,36 +37,19 @@ const WPFSilverlight = ({ classes, breakpoint }) => {
 const styles = theme => ({
   wpf: {
     maxWidth: 160,
-    // [theme.breakpoints.up('md')]: {
-    //   // width: 10,
-    // }
   },
   silverlight: {
     maxWidth: 80,
   },
-  wrapper: {
-    // [theme.breakpoints.up('md')]: {
-    //   display: 'flex',
-    // },
-  },
   image: {
-    paddingTop: '1.5rem',
+    paddingTop: '2rem',
     display: 'flex',
     justifyContent: 'space-between',
     // eslint-disable-next-line
     justifyContent: 'space-evenly',
-    // [theme.breakpoints.up('md')]: {
-    //   backgroundColor: 'green',
-    //   flexBasis: '50%',
-    // }
   },
   text: {
     padding: '0 2rem',
-    // [theme.breakpoints.up('md')]: {
-    //   backgroundColor: 'blue',
-    //   padding: 0,
-    //   flexBasis: '50%',
-    // }
   },
 })
 

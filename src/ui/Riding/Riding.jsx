@@ -2,15 +2,11 @@ import React from 'react'
 import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import Text from 'ui/Text'
-import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
-// import iRiding from 'media/riding.jpg'
-import iRiding from 'media/riding-cropped.jpg'
+import iRidingXL from 'media/ridingXL.jpg'
+import PictureElement from 'ui/PictureElement'
 import Section from 'ui/Section'
 
-const image = (
-  <ResponsiveImage  src={iRiding} alt='carl riding charmeur' />
-)
 const text = (
   <div>
     <Text variant='subtitle2' align='center'>Once Upon A Time</Text>
@@ -21,14 +17,24 @@ const text = (
 
 const Responsive = ({ classes, breakpoint }) => {
 
-
   return (
-    <Section className={classes.wrapper}>
+    <Section className={classes.wrapper} background='dark'>
       <div className={classes.text}>
         { text }
       </div>
-      <div className={classes.image}>
-        { image }
+      <div>
+        <PictureElement
+          // maxHeight={300}
+          images={{
+            xs: iRidingXL,
+            sm: iRidingXL,
+            md: iRidingXL,
+            lg: iRidingXL,
+            xl: iRidingXL,
+          }}
+          alt='people at meeting around conference table'
+          className={classes.image}
+        />
       </div>
     </Section>
   )
@@ -36,22 +42,15 @@ const Responsive = ({ classes, breakpoint }) => {
 
 const styles = theme => ({
   wrapper: {
-    // [theme.breakpoints.up('md')]: {
-    //   display: 'flex',
-    // },
   },
   image: {
-    // [theme.breakpoints.up('md')]: {
-    //   backgroundColor: 'green',
-    //   flexBasis: '50%',
-    // }
+    marginTop: '3rem',
+    [theme.breakpoints.up('xl')]: {
+      maxWidth: 800,
+      marginTop: 70,
+    },
   },
   text: {
-    // [theme.breakpoints.up('md')]: {
-    //   backgroundColor: 'blue',
-    //   padding: 0,
-    //   flexBasis: '50%',
-    // }
   },
 })
 

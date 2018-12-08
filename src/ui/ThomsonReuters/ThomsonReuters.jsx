@@ -2,11 +2,8 @@ import React from 'react'
 import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import Text from 'ui/Text'
-import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
-import iTR from 'media/tr.jpg'
 import Section from 'ui/Section'
-
 
 const title = (
   <div>
@@ -23,7 +20,7 @@ const body = (
 const ThomsonReuters = ({ classes, breakpoint }) => {
 
   return (
-    <Section className={classes.wrapper}>
+    <Section>
       <div className={classes.text}>
         <span>{ title }</span>
         <span>{ body }</span>
@@ -33,31 +30,16 @@ const ThomsonReuters = ({ classes, breakpoint }) => {
 }
 
 const styles = theme => ({
-  wrapper: {
-    // [theme.breakpoints.up('md')]: {
-    //   display: 'flex',
-    // },
-  },
   logo: {
     maxWidth: 200,
-    // [theme.breakpoints.up('md')]: {
-    //   backgroundColor: 'green',
-    //   flexBasis: '50%',
-    //   flexShrink: 0,
-    //   // flexGrow: 1,
-    // }
   },
   image: {
   },
   text: {
     padding: '0 2rem',
-    // [theme.breakpoints.up('md')]: {
-    //   backgroundColor: 'blue',
-    //   padding: 0,
-    //   flexBasis: '50%',
-    //   // flexGrow: 1,
-    //   flexShrink: 0,
-    // }
+    [theme.breakpoints.up('md')]: {
+      padding: '0 11rem',
+    }
   },
 })
 

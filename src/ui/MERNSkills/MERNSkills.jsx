@@ -1,9 +1,9 @@
 import React from 'react'
 import injectSheet from 'react-jss'
-import iMongo from 'media/mongodb-light.svg'
-import iExpress from 'media/express-white.svg'
-import iReact from 'media/react.svg'
-import iNode from 'media/node-light.svg'
+import iMongo from 'media/logos/mongodb-light.xl.svg'
+import iExpress from 'media/logos/express-white.xl.svg'
+import iReact from 'media/logos/react.xl.svg'
+import iNode from 'media/logos/node-light.xl.svg'
 import Text from 'ui/Text'
 import Section from 'ui/Section'
 
@@ -36,38 +36,28 @@ const Skills = ({ classes, breakpoint }) => {
 const styles = theme => {
   return({
     wrapper: {
-      // [theme.breakpoints.up('md')]: {
-      //   display: 'flex',
-      // }
     },
     image: {
       [theme.breakpoints.up('lg')]: {
         marginTop: 70,
       }
-      // [theme.breakpoints.up('md')]: {
-      //   backgroundColor: 'green',
-      //   flexBasis: '50%',
-      //   display: 'flex',
-      //   justifyContent: 'center',
-      // }
     },
     text: {
-      // [theme.breakpoints.up('md')]: {
-      //   backgroundColor: 'blue',
-      //   flexBasis: '50%',
-      //   display: 'flex',
-      //   flexDirection: 'column',
-      //   alignItems: 'center',
-      // }
+      marginBottom: '3.5em',
     },
     logo: {
-      maxHeight: 40,
-      // [theme.breakpoints.up('md')]: {
-      //   maxHeight: 800,
-      // },
-      [theme.breakpoints.up('lg')]: {
-        maxHeight: 60,
+      maxHeight: '3rem',
+
+      [theme.breakpoints.up('md')]: {
+        maxHeight: '4rem',
+      },
+      [theme.breakpoints.up('xl')]: {
+        maxHeight: '3.75rem',
       }
+      // [theme.breakpoints.up('lg')]: {
+      //   maxHeight: 60,
+      // },
+
     },
 
     logoGroup: {
@@ -77,8 +67,9 @@ const styles = theme => {
       justifyContent: 'space-around',
       // eslint-disable-next-line
       justifyContent: 'space-evenly',
+      marginTop: '2em',
       [theme.breakpoints.up('lg')]: {
-        marginTop: 40,
+
       }
     },
 

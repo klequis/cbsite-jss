@@ -2,15 +2,7 @@ import React from 'react'
 import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import Text from 'ui/Text'
-import iMeetupXS from 'media/meetup-xs.jpg'
-import iMeetupMD from 'media/meetup-md.jpg'
-// import iMeetup0101 from 'media/meetup01.01.jpg'
-// import iMeetup0102 from 'media/meetup01.02.jpg'
-// import iMeetup0103 from 'media/meetup01.03.jpg'
-// import iMeetup0104 from 'media/meetup01.04.jpg'
-// import iMeetup0105 from 'media/meetup01.05.jpg'
-// import iMeetup01012 from 'media/meetup01.012.jpg'
-import iSquare from 'media/square.jpg'
+import iTVC01 from 'media/meetup/tvc01.jpg'
 import withBreakpoint from 'ui/withBreakpoint'
 import Section from 'ui/Section'
 import PictureElement from 'ui/PictureElement'
@@ -20,32 +12,9 @@ const text = (
   <div>
     <Text variant='h2' align='center'>TriValley Coders</Text>
     <Text variant='subtitle2' align='center'>Founder</Text>
-    <Text variant='body1'>TriValley Coders was founded in 2016 as a community of software developers helping each other learn to code. Over the past 2.5 years it has evolved into a class-like format with mentors helping attendees to lean specific MERN Stack skills. Since inception, TriValley Coders has held more than 160 events.</Text>
+    <Text variant='body1'>TriValley Coders was founded in 2016 as a community of software developers helping each other learn to code. Over the past 2.5 years it has evolved into a class-like format with mentors helping attendees to learn specific MERN Stack skills. Since inception, TriValley Coders has held more than 160 events.</Text>
   </div>
 )
-
-const Image = (props) => {
-  // console.log('props', props)
-  const { right, bottom, left, width, height} = props
-
-  // yellow('ratio', `${props.width / props.height} - width: ${props.width}`)
-
-  yellow('right - left', right - left )
-
-  return (
-    <div className={props.className}>
-      <PictureElement
-        // maxHeight={300}
-        images={{
-          xs: iMeetupXS,
-          sm: iMeetupXS,
-          md: iMeetupMD,
-          lg: iSquare,
-          xl: iSquare,
-        }} alt='people at meeting around conference table' />
-    </div>
-  )
-}
 
 const TriValleyCoders = ({ classes, breakpoint }) => {
   return (
@@ -54,43 +23,34 @@ const TriValleyCoders = ({ classes, breakpoint }) => {
         <div className={classes.text}>
           { text }
         </div>
-        <div className={classes.image}>
-          <Image
-            className={classes.image}
-          />
-        </div>
+        <PictureElement
+          images={{
+            xs: iTVC01,
+            sm: iTVC01,
+            md: iTVC01,
+            lg: iTVC01,
+            xl: iTVC01,
+          }}
+          alt='people at meeting around conference table'
+          className={classes.image}
+        />
       </div>
     </Section>
   )
 }
 
 const styles = theme => ({
-  wrapper: {
-    // [theme.breakpoints.up('md')]: {
-    //   display: 'flex',
-    //   // minHeight: 300,
-    // }
-  },
   image: {
-    marginTop: '1.5rem',
-    // [theme.breakpoints.up('md')]: {
-    //   backgroundColor: 'green',
-    //   margin: 0,
-    //   flexBasis: '50%',
-    //   flexShrink: 0,
-    // }
+    marginTop: '2.5rem',
+    [theme.breakpoints.up('xl')]: {
+      marginTop: 70,
+    }
   },
   text: {
     padding: '0 2rem',
-    [theme.breakpoints.up('lg')]: {
-      padding: '0 20%',
-    },
-    // [theme.breakpoints.up('md')]: {
-    //   backgroundColor: 'blue',
-    //   flexBasis: '50%',
-    //   // new
-    //   padding: '3rem 2rem'
-    // }
+    [theme.breakpoints.up('md')]: {
+      padding: '0 11rem',
+    }
   },
 })
 

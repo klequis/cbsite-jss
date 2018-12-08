@@ -4,7 +4,7 @@ import injectSheet from 'react-jss'
 import Text from 'ui/Text'
 import ResponsiveImage from 'ui/ResponsiveImage'
 import withBreakpoint from 'ui/withBreakpoint'
-import iCacf from 'media/cacf.png'
+import iCacf from 'media/logos/cacf.png'
 import Section from 'ui/Section'
 
 const text = (
@@ -30,7 +30,10 @@ const CACF = ({ classes, breakpoint }) => {
 
 const styles = theme => ({
   logo: {
-    maxWidth: 210,
+    maxWidth: '15rem',
+    [theme.breakpoints.up('md')]: {
+      maxWidth: '20rem',
+    }
   },
   wrapper: {
     // [theme.breakpoints.up('md')]: {

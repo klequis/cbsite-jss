@@ -1,31 +1,27 @@
 import React from 'react'
 import injectSheet from 'react-jss'
 import Text from 'ui/Text'
-import iReactRouter from 'media/react-router.svg'
-import iRedux from 'media/redux.svg'
-import iMUI from 'media/material-ui.svg'
-import iMySql from 'media/mysql.svg'
-import iRest from 'media/rest-api.svg'
-import iWebpack from 'media/webpack.svg'
-import iUbuntu from 'media/ubuntu.svg'
-import iPassport from 'media/passport.svg'
-import iMocha from 'media/mocha.svg'
-import iTravis from 'media/travis-ci.svg'
-import iYarn from 'media/yarn.svg'
-import iRamda from 'media/ramda.svg'
-import iWordpress from 'media/wordpress.svg'
-import iMarkdown from 'media/markdown.svg'
-import iZenHub from 'media/zenhub.svg'
-import iNodemon from 'media/nodemon.svg'
-import iDrupal from 'media/drupal.svg'
-import iAWS from 'media/aws-sdk-js.svg'
-import iJS from 'media/js-es6.svg'
-import iBootstrap from 'media/bootstrap.svg'
+import iReactRouter from 'media/logos/react-router.svg'
+import iRedux from 'media/logos/redux.svg'
+import iMUI from 'media/logos/material-ui.svg'
+import iMySql from 'media/logos/mysql.svg'
+import iRest from 'media/logos/rest-api.svg'
+import iWebpack from 'media/logos/webpack.svg'
+import iUbuntu from 'media/logos/ubuntu.svg'
+import iPassport from 'media/logos/passport.svg'
+import iMocha from 'media/logos/mocha.svg'
+import iTravis from 'media/logos/travis-ci.svg'
+import iYarn from 'media/logos/yarn.svg'
+import iRamda from 'media/logos/ramda.svg'
+import iWordpress from 'media/logos/wordpress.svg'
+import iMarkdown from 'media/logos/markdown.svg'
+import iZenHub from 'media/logos/zenhub.svg'
+import iNodemon from 'media/logos/nodemon.svg'
+import iDrupal from 'media/logos/drupal.svg'
+import iAWS from 'media/logos/aws-sdk-js.svg'
+import iJS from 'media/logos/js-es6.svg'
+import iBootstrap from 'media/logos/bootstrap.svg'
 import Section from 'ui/Section'
-
-// const shadowStyle = {
-//   boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-// }
 
 const TheRestSkills = (props) => {
   const { classes } = props
@@ -63,32 +59,29 @@ const TheRestSkills = (props) => {
   )
 }
 
-const styles = {
+const styles = theme =>({
   restLogo: {
-    // marginRight: 5,
-    // marginLeft: 5,
-    // margin: '1rem 1rem',
-    // maxHeight: 70,
-    margin: '1rem 0'
+    margin: '1rem 1rem',
+    width: 140,
+    [theme.breakpoints.up('sm')]: {
+      width: 150,
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: 'auto',
+    }
 
   },
   wrapper: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    // alignItems: 'center',
-    // padding: '4rem 4rem'
 
   },
   theRestLogos: {
-    // minHeight: 300,
     display: 'flex',
     flexFlow: 'row wrap',
     justifyContent: 'space-around',
-    // paddingLeft: '5%',
-    // paddingRight: '5%',
-    // alignItems: 'center',
   }
-}
+})
 
 export default injectSheet(styles)(TheRestSkills)
