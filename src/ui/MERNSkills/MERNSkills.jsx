@@ -53,11 +53,7 @@ const styles = theme => {
       },
       [theme.breakpoints.up('xl')]: {
         maxHeight: '3.75rem',
-      }
-      // [theme.breakpoints.up('lg')]: {
-      //   maxHeight: 60,
-      // },
-
+      },
     },
 
     logoGroup: {

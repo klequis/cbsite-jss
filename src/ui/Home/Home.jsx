@@ -16,7 +16,7 @@ import Breakpoints from 'ui/Breakpoint'
 const Home = ({ classes }) => {
   return (
     <div className={classes.wrapper}>
-      {/* <Breakpoints /> */}
+      <Breakpoints />
       <MERNSkills />
       <Responsive />
       <TriValleyCoders />

@@ -14,7 +14,6 @@ const theme = {
     colors: {
       background: {
         light: 'white',
-        // dark: '#0072CE'
         dark: '#005ca8'
       }
     },
@@ -23,7 +22,6 @@ const theme = {
       dark: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.075)',
     },
     xs: {
-      // backgroundColor: 'red',
       boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.15)',
       paddingTop: '4rem',
       paddingBottom: '4rem',
@@ -42,16 +40,20 @@ const theme = {
 
       },
       xs: {
+        body: {
+
+        },
         h1: {
           fontSize: '4.0rem',
+          // fontSize: '4.4rem',
           lineHeight: 1.2,
           fontWeight: 300,
-          // letterSpacing: '-0.05em',
           textAlign: 'center',
           margin: '0 0 20px 0',
         },
         h2: {
           fontSize: '2.0rem',
+          // fontSize: '2.2rem',
           lineHeight: 1.375,
           fontWeight: 300,
           // letterSpacing: '-0.05em',
@@ -60,6 +62,7 @@ const theme = {
         },
         h3: {
           fontSize: '1.25rem',
+          // fontSize: '1.375rem',
           lineHeight: 1.375,
           fontWeight: 300,
           // letterSpacing: '-0.05em',
@@ -67,6 +70,7 @@ const theme = {
         },
         h4: {
           fontSize: '1.0rem',
+          // fontSize: '1.1rem',
           lineHeight: 1.375,
           fontWeight: 300,
           // letterSpacing: '-0.05em',
@@ -74,6 +78,7 @@ const theme = {
         },
         subtitle1: {
           fontSize: '1.775rem',
+          // fontSize: '1.9525rem',
           lineHeight: 'inherit',
           fontStyle: 'italic',
           marginTop: '-0.65rem',
@@ -82,6 +87,7 @@ const theme = {
         },
         subtitle2: {
           fontSize: '1.25rem',
+          // fontSize: '1.375rem',
           lineHeight: 1.65,
           fontStyle: 'italic',
           marginTop: '-0.65rem',
@@ -90,6 +96,7 @@ const theme = {
         },
         subtitle3: {
           fontSize: '1.1rem',
+          // fontSize: '2.1rem',
           lineHeight: 1.65,
           fontStyle: 'italic',
           marginTop: '-0.65rem',
@@ -100,6 +107,7 @@ const theme = {
       md: {
         h1: {
           fontSize: '3.5rem',
+          // fontSize: '3.85rem',
           lineHeight: 1.2,
           fontWeight: 300,
           letterSpacing: '-0.05em',
@@ -107,6 +115,7 @@ const theme = {
         },
         h2: {
           fontSize: '2.25rem',
+          // fontSize: '2.475rem',
           lineHeight: 1.375,
           fontWeight: 300,
           // letterSpacing: '-0.05em',
@@ -114,6 +123,7 @@ const theme = {
         },
         h3: {
           fontSize: '1.5rem',
+          // fontSize: '1.65rem',
           lineHeight: 1.375,
           fontWeight: 300,
           // letterSpacing: '-0.05em',
@@ -121,6 +131,7 @@ const theme = {
         },
         h4: {
           fontSize: '1.1rem',
+          // fontSize: '1.21rem',
           lineHeight: 1.375,
           fontWeight: 300,
           // letterSpacing: '-0.05em',
@@ -128,6 +139,7 @@ const theme = {
         },
         subtitle1: {
           fontSize: '1.375rem',
+          // fontSize: '1.5125rem',
           lineHeight: 'inherit',
           fontStyle: 'italic',
           marginTop: '-0.65rem',
@@ -135,7 +147,7 @@ const theme = {
           textAlign: 'left',
         },
         subtitle2: {
-          fontSize: '1.25rem',
+          fontSize: '1.375rem',
           lineHeight: 1.65,
           fontStyle: 'italic',
           marginTop: '-0.65rem',
@@ -143,7 +155,7 @@ const theme = {
           textAlign: 'left',
         },
         subtitle3: {
-          fontSize: '1.1rem',
+          fontSize: '1.21rem',
           lineHeight: 1.65,
           fontStyle: 'italic',
           marginTop: '-0.65rem',
