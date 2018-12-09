@@ -61,7 +61,7 @@ const TheRestSkills = (props) => {
 
 const styles = theme =>({
   restLogo: {
-    margin: '1rem 1rem',
+    margin: '1rem 0.5rem',
     width: 140,
     [theme.breakpoints.up('sm')]: {
       width: 150,

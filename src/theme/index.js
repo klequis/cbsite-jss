@@ -58,7 +58,7 @@ const theme = {
           fontWeight: 300,
           // letterSpacing: '-0.05em',
           textAlign: 'center',
-          margin: '0 0 20px 0',
+          margin: '0 1rem 20px 1rem',
         },
         h3: {
           fontSize: '1.25rem',

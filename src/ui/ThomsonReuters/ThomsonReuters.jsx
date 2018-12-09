@@ -1,8 +1,5 @@
 import React from 'react'
-import { compose } from 'recompose'
-import injectSheet from 'react-jss'
 import Text from 'ui/Text'
-import withBreakpoint from 'ui/withBreakpoint'
 import Section from 'ui/Section'
 import ParagraphWrapper from 'ui/ParagraphWrapper'
 
@@ -28,21 +25,4 @@ const ThomsonReuters = ({ classes, breakpoint }) => {
   )
 }
 
-const styles = theme => ({
-  logo: {
-    maxWidth: 200,
-  },
-  image: {
-  },
-  text: {
-    // padding: '0 2rem',
-    // [theme.breakpoints.up('md')]: {
-    //   padding: '0 11rem',
-    // }
-  },
-})
-
-export default compose(
-  withBreakpoint,
-  injectSheet(styles)
-)(ThomsonReuters)
+export default ThomsonReuters

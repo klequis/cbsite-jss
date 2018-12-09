@@ -1,5 +1,4 @@
 import React from 'react'
-import injectSheet from 'react-jss'
 import Responsive from 'ui/Responsive'
 import TriValleyCoders from 'ui/TriValleyCoders'
 import MorganStanley from 'ui/MorganStanley'
@@ -11,12 +10,12 @@ import MERNSkills from 'ui/MERNSkills'
 import RestOfSkills from 'ui/RestOfSkills'
 import WPFSilverlight from 'ui/WPFSilverlight'
 import ThePast from 'ui/ThePast'
-import Breakpoints from 'ui/Breakpoint'
+import Footer from 'ui/Footer'
 
-const Home = ({ classes }) => {
+const Home = () => {
   return (
-    <div className={classes.wrapper}>
-      <Breakpoints />
+    <div>
+      {/* <Breakpoints /> */}
       <MERNSkills />
       <Responsive />
       <TriValleyCoders />
@@ -28,15 +27,9 @@ const Home = ({ classes }) => {
       <Riding />
       <HKNC />
       <CACF />
+      <Footer />
     </div>
   )
 }
 
-const styles = {
-  wrapper: {
-    // maxWidth: 1180,
-    // margin: 'auto',
-  },
-}
-
-export default injectSheet(styles)(Home)
+export default Home

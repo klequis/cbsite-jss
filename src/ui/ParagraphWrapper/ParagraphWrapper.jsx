@@ -12,11 +12,16 @@ const ParagraphWrapper = ({ children, classes }) => {
 
 const styles = theme => ({
   wrapper: {
-    padding: 0,
-    [theme.breakpoints.up('sm')]: {
-      // padding: '0 15%'
-    }
-
+    padding: '0 2rem',
+    [theme.breakpoints.up('md')]: {
+      padding: '0 4rem',
+    },
+    [theme.breakpoints.up(870)]: {
+      padding: '0 8rem',
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: '0 11rem',
+    },
     // padding: '0 2rem',
     // [theme.breakpoints.up('md')]: {
     //   padding: '0 11rem',

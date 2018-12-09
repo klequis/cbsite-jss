@@ -1,8 +1,6 @@
 import React from 'react'
-import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import Text from 'ui/Text'
-import withBreakpoint from 'ui/withBreakpoint'
 import iRidingXL from 'media/ridingXL.jpg'
 import PictureElement from 'ui/PictureElement'
 import Section from 'ui/Section'
@@ -18,10 +16,8 @@ const text = (
 const Responsive = ({ classes, breakpoint }) => {
 
   return (
-    <Section className={classes.wrapper} background='dark'>
-      <div className={classes.text}>
-        { text }
-      </div>
+    <Section background='dark'>
+      { text }
       <div>
         <PictureElement
           // maxHeight={300}
@@ -41,8 +37,6 @@ const Responsive = ({ classes, breakpoint }) => {
 }
 
 const styles = theme => ({
-  wrapper: {
-  },
   image: {
     marginTop: '3rem',
     [theme.breakpoints.up('xl')]: {
@@ -50,30 +44,6 @@ const styles = theme => ({
       marginTop: 70,
     },
   },
-  text: {
-  },
 })
 
-export default compose(
-  withBreakpoint,
-  injectSheet(styles)
-)(Responsive)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default injectSheet(styles)(Responsive)

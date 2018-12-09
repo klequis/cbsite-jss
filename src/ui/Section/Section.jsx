@@ -1,15 +1,6 @@
 import React from 'react'
-import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import classNames from 'classnames'
-import withBreakpoint from 'ui/withBreakpoint'
-import { green } from 'logger'
-
-// const shadowStyle = {
-//   boxShadow: 'inset 0 1px 0 0 rgba(0, 0, 0, 0.075)',
-// }
-
-
 
 const Section = (props) => {
 
@@ -24,10 +15,8 @@ const Section = (props) => {
     ]
 
   )
-  // green('Section: props', props)
-  // green('Section: clsNames', clsNames)
-  green('background', background)
-  return (
+
+return (
     <section className={clsNames}>
       <div className={classes.inner}>
       {children}
@@ -51,7 +40,4 @@ const styles = theme => ({
   },
 })
 
-export default compose(
-  withBreakpoint,
-  injectSheet(styles)
-)(Section)
+export default injectSheet(styles)(Section)
