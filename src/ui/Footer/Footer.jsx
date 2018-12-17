@@ -1,6 +1,5 @@
 import React from 'react'
 import injectSheet from 'react-jss'
-import Section from 'ui/Section'
 import iMeetup from 'media/logos/meetup-swarm.svg'
 import iGithub from 'media/logos/github-octocat.svg'
 import iFacebook from 'media/logos/facebook.svg'
@@ -8,7 +7,7 @@ import iSlack from 'media/logos/slack.svg'
 import iContact from 'media/contact02.svg'
 
 const meetupURL = 'https://www.meetup.com/trivalleycoders/'
-const gitHubURL = '"https://www.meetup.com/trivalleycoders/"'
+const gitHubURL = 'https://github.com/klequis'
 const facebookURL = 'https://www.facebook.com/groups/free.code.camp.sanramon/'
 const slackURL = 'https://join.slack.com/t/trivalleycoders/shared_invite/enQtMjk2NDY3NDAwMjI1LWU0YjFjNjE5MDgwYzYwYmUwMWJlNjk1NDU4YmI5ZmZjZGU0ZDcwY2E2Y2RlNmU0MWFlZTUyODFkYzM1NGVlYTQ'
 

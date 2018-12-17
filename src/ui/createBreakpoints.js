@@ -4,7 +4,6 @@
 // Sorted ASC by size. That's important.
 // It can't be configured as it's used statically for propTypes.
 import { breakpointValues, breakpointKeys, getValueForKey } from 'ui/breakpoints'
-import { pink } from 'logger'
 
 
 
@@ -49,7 +48,6 @@ export default function createBreakpoints(breakpoints) {
 
     const q = `@media (min-width:${breakpointValues[start]}${unit}) and  + (max-width:${breakpointValues[breakpointKeys[endIndex]] - step / 100}${unit})`
 
-    // pink('createBreakpoints.up', `(start:${start}, end:${end}) ${q}`)
     return q
   }
 

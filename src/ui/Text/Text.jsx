@@ -4,7 +4,6 @@ import { compose } from 'recompose'
 import injectSheet from 'react-jss'
 import withTheme from 'ui/withTheme'
 import classNames from 'classnames'
-import { green } from '../../logger/index';
 
 const variants = [
   'h1',
@@ -47,8 +46,6 @@ const Text = ({
   variant
    /*, align */
   }) => {
-  // console.log('Text: variant', variant)
-  // console.log('Text: children', children)
 
   const clsNames = classNames([
     classes.imgFluid,
@@ -61,23 +58,14 @@ const Text = ({
     },
 
   ])
-  // green('Text: clsNames', clsNames)
   const Component = getElementForVarient(variant)
 
   if (!variants.includes(variant)) {
     return <p style={unknown}>unknow variant {variant}</p>
   }
-  // let alignClassName = ''
-  // if (align === 'center') {
-  //   alignClassName = 'center'
-  // } else {
-  //   alignClassName = 'left'
-  // }
 
   return (
     <Component
-      // align={align ? classes[align] : classes.left}
-      // className={classNames(classes[variant], classes[alignClassName])}
       className={clsNames}
     >
       {children}
