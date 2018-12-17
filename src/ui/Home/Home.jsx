@@ -18,8 +18,8 @@ const Home = () => {
       {/* <Breakpoints /> */}
       <MERNSkills />
       <Responsive />
-      <TriValleyCoders />
       <RestOfSkills />
+      <TriValleyCoders />
       <ThePast />
       <MorganStanley />
       <ThomsonReuters />
