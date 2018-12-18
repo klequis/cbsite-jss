@@ -74,23 +74,26 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1"
      transform="translate(0,496)">
-    <rect
-       style="fill:#005ca8;fill-opacity:1;stroke:none;stroke-width:41.12125778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.55294118"
-       id="rect1395"
-       width="512"
-       height="512"
-       x="0"
-       y="-496" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:518.144104px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:12.95360184"
-       x="-3.5401571"
-       y="-69.1763"
-       id="text1399"><tspan
-         sodipodi:role="line"
-         id="tspan1397"
-         x="-3.5401571"
+    <g
+       id="g1412">
+      <rect
+         y="-496"
+         x="0"
+         height="512"
+         width="512"
+         id="rect1395"
+         style="fill:#005ca8;fill-opacity:1;stroke:none;stroke-width:41.12125778;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.55294118" />
+      <text
+         id="text1399"
          y="-69.1763"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:518.14733887px;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:12.95360184">CB</tspan></text>
+         x="-3.5401571"
+         style="font-style:normal;font-weight:normal;font-size:518.144104px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:12.95360184"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:518.14733887px;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:12.95360184"
+           y="-69.1763"
+           x="-3.5401571"
+           id="tspan1397"
+           sodipodi:role="line">CB</tspan></text>
+    </g>
   </g>
 </svg>

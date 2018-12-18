@@ -9,9 +9,9 @@ import ParagraphWrapper from 'ui/ParagraphWrapper'
 
 const text = (
   <ParagraphWrapper>
-    <Text variant='h2' align='center'>Helen Keller Nation Center</Text>
+    <Text variant='h2' align='center'>Helen Keller National Center</Text>
     <Text variant='subtitle2' align='center'>Coordinator Auxiliary Medical Services</Text>
-    <Text variant='body1'>Worked at Helen Keller part-time for two years and then volunteered. They gave me a generous title. I taught daily living skills, performed sign-language interpretation for doctors &amp; patients, and a variety of non-glorious tasks such as medial record filing, first-aid station maintenance and airport transportation. </Text>
+    <Text variant='body1'>Worked at Helen Keller part-time for 2 years and then volunteered. They gave me a generous title. I taught daily living skills, performed sign-language interpretation for doctors &amp; patients, and a variety of non-glorious tasks such as medical record filing, first-aid station maintenance and airport transportation. </Text>
   </ParagraphWrapper>
 )
 
