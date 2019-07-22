@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/klequis
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://carlbecker.com
+  * I am klequis (https://keybase.io/klequis) on keybase.
+  * I have a public key ASDlkFperaci1TW6P4yfoAqPhSgk6-dCSna-GO4XmiJ4DAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f1263990a50d523e6d44c0f61ed9f4d64dde495e3a8ca4b3aacc1c78524c09470a",
+      "host": "keybase.io",
+      "kid": "0120e5905a5eada722d535ba3f8c9fa00a8f852824ebe7424a76be18ee179a22780c0a",
+      "uid": "b41538062d72b78572e4f0411aa1e419",
+      "username": "klequis"
+    },
+    "merkle_root": {
+      "ctime": 1563563806,
+      "hash": "576da8ecd985683101b823bf74194c81f0be7f44094ec0471c96dab315112da92ef7f0eefc270946803b5532fde0d247dbd6a32e06d10e89863241cdb5d56d22",
+      "hash_meta": "55245ecfa1309109fe21e389c6e3d6ac493f923aefbf0d5da4179358b69cc769",
+      "seqno": 5802873
+    },
+    "service": {
+      "entropy": "opqDmYOWwy1x4YLqEqG2n0tS",
+      "hostname": "carlbecker.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.2.1"
+  },
+  "ctime": 1563563821,
+  "expire_in": 504576000,
+  "prev": "91ceb502d0ee5015373583d1ce0408298698be3bc8eba5c8ca9e75f55ea14d24",
+  "seqno": 14,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg5ZBaXq2nItU1uj+Mn6AKj4UoJOvnQkp2vhjuF5oieAwKp3BheWxvYWTESpcCDsQgkc61AtDuUBU3NYPRzgQIKYaYvjvI66XIyp519V6hTSTEIPVeLUdp5SyzE1k+khSNnTPGZOnG5vAx7LtaoIIkXYBKAgHCo3NpZ8RA2txdEpqijsXM2YuVzxLTvGjKceCfsfydGkWG/jOxu24FEJAPIOFYavPrsb7pPLKZzg69Bwpslq1hzxORza5LAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJYwkuLIkdomG9ge/YiPLi8epWml8ZLwQNxjZc+IHEmDo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/klequis
+
+==================================================================

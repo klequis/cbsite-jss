@@ -3,7 +3,6 @@ import injectSheet from 'react-jss'
 import Home from 'ui/Home'
 
 class App extends React.Component {
-
   render() {
     return (
       <div>
