@@ -27,7 +27,7 @@ const variantMap = {
   body1: 'p'
 }
 
-const getElementForVarient = (variant) => {
+const getElementForVariant = (variant) => {
   return variantMap[variant]
 }
 
@@ -35,6 +35,17 @@ const unknown = {
   color: 'red',
   fontWeight: 'bold',
 }
+
+/**
+ * 
+ * @align {string} left, center
+ * @children {react elements} all children of the component
+ * @classes {object} those defined in `styles` below
+ * @className {object} an additional class passed in
+ * @theme {object} from `withTheme` below
+ * @variant {string} 'h1','h2','h3','h4','subtitle1','subtitle2','subtitle3','body1'
+ * @returns 
+ */
 
 const Text = ({
   align,
@@ -44,24 +55,28 @@ const Text = ({
   marginBottom=true,
   theme,
   variant
-   /*, align */
   }) => {
-
+  console.log("obj", {
+    imgFluid: classes.imgFluid,
+    classNameProp,
+    classesVariant: classes[variant],
+    classesLeft: classes.left,
+    classesCenter: classes.center
+  });
   const clsNames = classNames([
     classes.imgFluid,
     classNameProp,
     classes[variant],
     {
-      [classes.marginBottom]: marginBottom,
       [classes.left]: align === 'left',
       [classes.center]: align === 'center',
     },
 
   ])
-  const Component = getElementForVarient(variant)
+  const Component = getElementForVariant(variant)
 
   if (!variants.includes(variant)) {
-    return <p style={unknown}>unknow variant {variant}</p>
+    return <p style={unknown}>unknown variant {variant}</p>
   }
 
   return (

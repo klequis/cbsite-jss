@@ -1,11 +1,11 @@
 import React from 'react'
 import { compose } from 'recompose'
 import injectSheet from 'react-jss'
-import Text from 'ui/Text'
+import Text from 'components/Text'
 import iTVC01 from 'media/meetup/tvc01.jpg'
-import Section from 'ui/Section'
+import Section from 'components/Section'
 import PictureElement from 'ui/PictureElement'
-import ParagraphWrapper from 'ui/ParagraphWrapper'
+import ParagraphWrapper from 'components/ParagraphWrapper'
 
 const text = (
   <ParagraphWrapper>

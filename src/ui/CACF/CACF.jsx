@@ -1,10 +1,10 @@
 import React from 'react'
 import { compose } from 'recompose'
 import injectSheet from 'react-jss'
-import Text from 'ui/Text'
-import ResponsiveImage from 'ui/ResponsiveImage'
+import Text from 'components/Text'
+import ResponsiveImage from 'components/ResponsiveImage'
 import iCacf from 'media/logos/cacf.png'
-import Section from 'ui/Section'
+import Section from 'components/Section'
 
 const text = (
   <div>

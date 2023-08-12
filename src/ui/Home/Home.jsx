@@ -6,17 +6,17 @@ import ThomsonReuters from 'ui/ThomsonReuters'
 import Riding from 'ui/Riding'
 import HKNC from 'ui/HKNC'
 import CACF from 'ui/CACF'
-import MERNSkills from 'ui/MERNSkills'
 import RestOfSkills from 'ui/RestOfSkills'
 import WPFSilverlight from 'ui/WPFSilverlight'
 import ThePast from 'ui/ThePast'
 import Footer from 'ui/Footer'
+import Title from 'ui/Title'
 
 const Home = () => {
   return (
     <div>
       {/* <Breakpoints /> */}
-      <MERNSkills />
+      <Title />
       <Responsive />
       <RestOfSkills />
       <TriValleyCoders />

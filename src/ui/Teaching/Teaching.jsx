@@ -1,7 +1,7 @@
 import React from 'react'
 import injectSheet from 'react-jss'
-import Text from 'ui/Text'
-import Section from 'ui/Section'
+import Text from 'components/Text'
+import Section from 'components/Section'
 import iTeaching from 'media/teaching.jpg'
 
 const Teaching = () => {

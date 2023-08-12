@@ -1,7 +1,7 @@
 import React from 'react'
-import Text from 'ui/Text'
-import Section from 'ui/Section'
-import ParagraphWrapper from 'ui/ParagraphWrapper'
+import Text from 'components/Text'
+import Section from 'components/Section'
+import ParagraphWrapper from 'components/ParagraphWrapper'
 
 const title = (
   <Text variant='h2' align='center'>Morgan Stanley</Text>

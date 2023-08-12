@@ -1,9 +1,9 @@
 import React from 'react'
 import injectSheet from 'react-jss'
-import Text from 'ui/Text'
+import Text from 'components/Text'
 import iRidingXL from 'media/ridingXL.jpg'
 import PictureElement from 'ui/PictureElement'
-import Section from 'ui/Section'
+import Section from 'components/Section'
 
 const text = (
   <div>

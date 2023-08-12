@@ -1,11 +1,11 @@
 import React from 'react'
 import { compose } from 'recompose'
 import injectSheet from 'react-jss'
-import Text from 'ui/Text'
-import ResponsiveImage from 'ui/ResponsiveImage'
+import Text from 'components/Text'
+import ResponsiveImage from 'components/ResponsiveImage'
 import iHknc from 'media/logos/hknc-1.png'
-import Section from 'ui/Section'
-import ParagraphWrapper from 'ui/ParagraphWrapper'
+import Section from 'components/Section'
+import ParagraphWrapper from 'components/ParagraphWrapper'
 
 const text = (
   <ParagraphWrapper>

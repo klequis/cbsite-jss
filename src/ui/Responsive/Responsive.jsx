@@ -1,9 +1,9 @@
 import React from 'react'
 import injectSheet from 'react-jss'
-import Text from 'ui/Text'
+import Text from 'components/Text'
 import iResponsive from 'media/responsive.svg'
-import ResponsiveImage from 'ui/ResponsiveImage'
-import Section from 'ui/Section'
+import ResponsiveImage from 'components/ResponsiveImage'
+import Section from 'components/Section'
 
 
 const text = (

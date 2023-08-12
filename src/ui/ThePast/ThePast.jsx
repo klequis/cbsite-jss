@@ -1,6 +1,6 @@
 import React from 'react'
 import injectSheet from 'react-jss'
-import Text from 'ui/Text'
+import Text from 'components/Text'
 
 const ThePast = ({ classes }) => {
   return (

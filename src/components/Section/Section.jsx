@@ -29,6 +29,8 @@ return (
 const styles = theme => ({
   wrapper: theme.section.xs,
   inner: {
+    display: 'flex',
+    alignContent: 'stretch',
     maxWidth: 1180,
     margin: 'auto',
   },
