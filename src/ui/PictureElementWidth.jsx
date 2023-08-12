@@ -45,7 +45,7 @@ class PictureElement extends React.Component { // make pure?
           <source srcSet={images.lg} media={`(max-width: ${breakpoints.xl - 1}px)`} />
           {/* xl */}
           <source srcSet={images.xl} media={`(min-width: ${breakpoints.xl - 1}px)`} />
-          <img srcSet={images.md} className={classes.fluid} alt="MDN" />
+          <img srcSet={images.md} className={classes.fluid} alt='MDN' />
         </picture>
       </div>
     )

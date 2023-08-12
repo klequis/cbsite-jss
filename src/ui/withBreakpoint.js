@@ -4,7 +4,6 @@ import { getKeyForValue } from 'ui/breakpoints'
 
 const withBreakpoints = Component => {
   function WithBreakpoints(props) {
-    // console.log(getKeyForValue(props.width))
     return (
       <Component
         breakpoint={getKeyForValue(props.width)}

@@ -56,13 +56,6 @@ const Text = ({
   theme,
   variant
   }) => {
-  console.log("obj", {
-    imgFluid: classes.imgFluid,
-    classNameProp,
-    classesVariant: classes[variant],
-    classesLeft: classes.left,
-    classesCenter: classes.center
-  });
   const clsNames = classNames([
     classes.imgFluid,
     classNameProp,

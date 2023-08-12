@@ -26,8 +26,6 @@ class PictureElement extends React.Component { // make pure?
       className: classNameProp,
       images
     } = this.props
-    // console.log(breakpoints)
-    // green('images', images)
     const clsNames = classNames([
       classes.fluid,
       classNameProp
@@ -50,7 +48,7 @@ class PictureElement extends React.Component { // make pure?
           <img
             srcSet={images.md}
             className={clsNames}
-            alt="none"
+            alt='none'
             // style={{maxHeight: this.props.maxHeight}}
           />
         </picture>

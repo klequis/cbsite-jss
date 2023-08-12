@@ -1,62 +1,58 @@
 import React from "react";
-import injectSheet from "react-jss";
-import classNames from "classnames";
-import PropTypes from "prop-types";
+import * as R from "ramda";
+
+const bgColorWhite = "white";
+const bgColorBlue = "blue";
 
 
-function mkClasses(classes, className, flexDirection) {
-  
-}
+/**
+ *
+ * @param {string} bgColor bgColorWhite || bgColorBlue
+ * @returns
+ */
+const sectionStyle = (bgColor = bgColorWhite) => {
+  return bgColor === bgColorWhite
+      ? {
+          boxShadow: "inset 0 1px 0 0 rgba(0, 0, 0, 0.15)",
+          backgroundColor: "white",
+          color: 'black'
+        }
+      : {
+          boxShadow: "inset 0 1px 0 0 rgba(255, 255, 255, 0.075)",
+          backgroundColor: "#005ca8",
+          color: 'white'
+        };
+};
+
+const innerStyle = (flexDirection = "none") => {
+  const flex =
+    flexDirection !== "none"
+      ? { display: "flex", alignContent: "stretch" }
+      : {};
+  return R.mergeRight(
+    {
+      maxWidth: 1180,
+      margin: "auto"
+    },
+    flex
+  );
+};
 
 const Section = props => {
-  console.log("props", props);
   const {
     children,
     classes,
     className,
-    background = "light",
-    // isFlexContainer = false,
-    // flexDirection
+    background = bgColorBlue,
+    flexDirection,
+    id
   } = props;
-  const clsNames = classNames(
-    {
-      [classes.dark]: background === "dark",
-      // [classes.inner]: isFlexContainer
-
-    },
-    [[classes.wrapper], className]
-  );
-
+  console.log("style", sectionStyle(background));
   return (
-    <section className={clsNames}>
-      <div className={classes.inner}>{children}</div>
+    <section id={id} style={sectionStyle(background)}>
+      <div style={innerStyle()}>{children}</div>
     </section>
   );
 };
 
-const styles = theme => ({
-  wrapper: theme.section.xs,
-  inner: {
-    // display: "flex",
-    // alignContent: "stretch",
-    maxWidth: 1180,
-    margin: "auto"
-  },
-  dark: {
-    // backgroundColor: '#2b3137',
-    backgroundColor: theme.section.colors.background.dark,
-    color: "white",
-    boxShadow: theme.section.shadow.dark
-  }
-});
-
-export default injectSheet(styles)(Section);
-
-Section.propTypes = {
-  children: PropTypes.object.isRequired,
-  classes: PropTypes.object,
-  className: PropTypes.object,
-  background: PropTypes.string,
-  // isFlexContainer: PropTypes.bool,
-  // flexDirection: PropTypes.string
-};
+export default Section;

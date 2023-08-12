@@ -28,10 +28,11 @@ const styles = theme => ({
       [theme.breakpoints.up('lg')]: {
         fontSize: '16pt'
       },
+      backgroundColor: 'orange'
     },
     body: {
       margin: 0,
-      fontFamily: '"Source Sans Pro", Helvetica, sans-serif',
+      fontFamily: "'Source Sans Pro', Helvetica, sans-serif",
       fontSize: '1rem',
       fontWeight: 300,
       lineHeight: 1.65,
