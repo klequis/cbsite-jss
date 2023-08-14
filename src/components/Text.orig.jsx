@@ -27,7 +27,7 @@ const variantMap = {
   body1: "p"
 };
 
-const getElementForVariant = variant => {
+const getElementForVarient = variant => {
   return variantMap[variant];
 };
 
@@ -35,17 +35,6 @@ const unknown = {
   color: "red",
   fontWeight: "bold"
 };
-
-/**
- *
- * @align {string} left, center
- * @children {react elements} all children of the component
- * @classes {object} those defined in `styles` below
- * @className {object} an additional class passed in
- * @theme {object} from `withTheme` below
- * @variant {string} 'h1','h2','h3','h4','subtitle1','subtitle2','subtitle3','body1'
- * @returns
- */
 
 const Text = ({
   align,
