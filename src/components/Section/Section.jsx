@@ -1,6 +1,8 @@
 import React from "react";
 import * as R from "ramda";
 import Text from "components/Text";
+import injectSheet from "react-jss";
+
 
 const bgColorWhite = "white";
 const bgColorBlue = "blue";
@@ -46,11 +48,13 @@ const Section = props => {
     flexDirection,
     id,
     gap,
+    theme,
     title = "none"
   } = props;
-  console.log("style", sectionStyle(background));
+  // console.log("style", sectionStyle(background));
+  console.log('theme', theme)
   return (
-    <section id={id} style={sectionStyle(background)}>
+    <section id={id} className={classes.wrapper} style={sectionStyle(background)}>
       {title !== "none" ? (
         <Text variant="h2" align="center">
           {title}
@@ -61,4 +65,8 @@ const Section = props => {
   );
 };
 
-export default Section;
+const styles = theme => ({
+  wrapper: theme.section.xs,
+});
+
+export default injectSheet(styles)(Section);
