@@ -108,7 +108,10 @@ const styles = theme => ({
   rightDiv: {
     flexGrow: 1,
     flexShrink: 3,
+    margin: '0 auto 0 10%'
     // backgroundColor: "green"
+    // display: 'flex',
+    // flexDirection: 'column'
   },
   phone: {
     width: '20%'

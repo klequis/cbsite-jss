@@ -18,7 +18,7 @@ const text = (
 const HKNC = ({ classes }) => {
 
   return  (
-    <Section>
+    <Section background='white'>
       { text }
       <div className={classes.image}>
         <ResponsiveImage src={iHknc} className={classes.logo} alt='helen keller national center' />

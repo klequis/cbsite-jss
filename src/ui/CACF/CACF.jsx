@@ -16,7 +16,7 @@ const text = (
 const CACF = ({ classes }) => {
 
   return (
-    <Section>
+    <Section background='white'>
       { text }
       <div className={classes.image}>
         <ResponsiveImage  src={iCacf} className={classes.logo} alt='responsive site on multi form factors' />

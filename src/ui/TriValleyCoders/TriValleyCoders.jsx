@@ -17,7 +17,7 @@ const text = (
 
 const TriValleyCoders = ({ classes, breakpoint }) => {
   return (
-    <Section>
+    <Section background='white'>
       { text }
       <PictureElement
         images={{

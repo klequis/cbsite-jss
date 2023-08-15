@@ -20,7 +20,7 @@ const text = (
 
 const WPFSilverlight = ({ classes }) => {
   return (
-    <Section>
+    <Section background='white'>
       { text }
       <div className={classes.image}>
         <div className={classes.wpf}>

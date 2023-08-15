@@ -16,7 +16,7 @@ const body = (
 
 const MorganStanley = ({ classes, breakpoint }) => {
   return (
-    <Section>
+    <Section background='white'>
       <span>{title}</span>
       <span>{body}</span>
     </Section>
