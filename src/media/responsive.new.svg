@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    data-name="Layer 1"
-   viewBox="0 0 1423.4301 497"
+   viewBox="0 0 1399.1141 497"
    version="1.1"
    id="svg287"
    sodipodi:docname="responsive.new.svg"
-   width="1423.4301"
+   width="1399.114"
    height="497"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -44,9 +44,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="1"
-     inkscape:cx="639"
-     inkscape:cy="257"
+     inkscape:zoom="0.5"
+     inkscape:cx="-550"
+     inkscape:cy="4"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -186,7 +186,7 @@
   </defs>
   <g
      id="g12"
-     transform="translate(0,2)">
+     transform="translate(4.272461e-6,2)">
     <path
        id="path47"
        d="m 535.27,16.5 h 562.25 a 35.18,35.18 0 0 1 35.18,35.18 V 432.51 H 500.09 V 51.68 A 35.18,35.18 0 0 1 535.27,16.5 Z"
@@ -796,29 +796,6 @@
        class="cls-25"
        style="fill:#666666" />
   </g>
-  <g
-     id="g141-5"
-     class="cls-21"
-     style="opacity:0.63"
-     transform="matrix(0.85573771,0,0,0.85573771,-66.080676,-1262.312)">
-    <image
-       id="image139-6"
-       height="86"
-       width="85"
-       transform="translate(1525.8,714.68)" />
-  </g>
-  <image
-     id="image147-1"
-     height="63.324593"
-     width="63.324593"
-     x="1231.0465"
-     y="-838.13995" />
-  <image
-     id="image153-0"
-     height="62.468853"
-     width="70.170494"
-     x="1243.8826"
-     y="-837.28418" />
   <g
      id="g11">
     <rect

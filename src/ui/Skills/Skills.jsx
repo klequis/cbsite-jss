@@ -2,46 +2,47 @@ import React from "react";
 // import Text from 'components/Text'
 import injectSheet from "react-jss";
 import Section from "components/Section";
-import iReactRouter from "media/logos/react-router.svg";
-import iRedux from "media/logos/redux.svg";
+// --
+import iAWS from "media/logos/aws-sdk-js.svg";
+import iBootstrap from "media/logos/bootstrap.svg";
+import iDrupal from "media/logos/drupal.svg";
+import iExpress from "media/logos/express-light.svg";
+import iJS from "media/logos/js-es6.svg";
+import iMarkdown from "media/logos/markdown.svg";
+import iMocha from "media/logos/mocha.svg";
+import iMongoDB from "media/logos/mongodb-dark.svg";
 import iMUI from "media/logos/material-ui.svg";
 import iMySql from "media/logos/mysql.svg";
-import iRest from "media/logos/rest-api.svg";
-import iWebpack from "media/logos/webpack.svg";
-import iUbuntu from "media/logos/ubuntu.svg";
-import iPassport from "media/logos/passport.svg";
-import iMocha from "media/logos/mocha.svg";
-import iTravis from "media/logos/travis-ci.svg";
-import iYarn from "media/logos/yarn.svg";
-import iRamda from "media/logos/ramda.svg";
-import iWordpress from "media/logos/wordpress.svg";
-import iMarkdown from "media/logos/markdown.svg";
-import iZenHub from "media/logos/zenhub.svg";
-import iNodemon from "media/logos/nodemon.svg";
-import iDrupal from "media/logos/drupal.svg";
-import iAWS from "media/logos/aws-sdk-js.svg";
-import iJS from "media/logos/js-es6.svg";
-import iBootstrap from "media/logos/bootstrap.svg";
-import iMongoDB from "media/logos/mongodb-dark.svg";
-import iExpress from "media/logos/express-light.svg";
-import iReact from "media/logos/react.svg";
 import iNode from "media/logos/node-light.new.svg";
-import iPhone from "media/r-phone.svg";
-import iTablet from "media/r-tablet.svg";
-import iLaptop from "media/r-laptop.svg";
+import iNodemon from "media/logos/nodemon.svg";
+import iPassport from "media/logos/passport.svg";
+import iRamda from "media/logos/ramda.svg";
+import iReact from "media/logos/react.svg";
+import iReactRouter from "media/logos/react-router.svg";
+import iRedux from "media/logos/redux.svg";
+import iRest from "media/logos/rest-api.svg";
+import iTravis from "media/logos/travis-ci.svg";
+import iUbuntu from "media/logos/ubuntu.svg";
+import iWebpack from "media/logos/webpack.svg";
+import iWordpress from "media/logos/wordpress.svg";
+import iYarn from "media/logos/yarn.svg";
+import iZenHub from "media/logos/zenhub.svg";
+// 
+import iResponsive from 'media/responsive.svg'
 
 const Skills = props => {
   const { classes } = props;
   return (
-    <Section flexDirection="row nowrap" background='white' gap='1em' title='Software Developer'>
+    <Section
+      flexDirection="column"
+      background="white"
+      gap="1em"
+      title="Software Developer"
+    >
       <div className={classes.leftDiv}>
-        {/* <b>Left</b> */}
-        <img src={iPhone} className={classes.phone} alt="phone" />
-        <img src={iTablet} className={classes.tablet} alt="tablet" />
-        <img src={iLaptop} className={classes.laptop} alt="laptop" />
+        <img src={iResponsive} className={classes.iResponsive} alt="images of " />
       </div>
       <div className={classes.rightDiv}>
-        {/* <b>Right</b> */}
         <img
           src={iExpress}
           className={classes.restLogo}
@@ -95,53 +96,34 @@ const Skills = props => {
 
 const styles = theme => ({
   leftDiv: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: 'space-around',
-    gap: "2em",
-    flexGrow: 10,
-    flexShrink: 2,
-    padding: '5% 0 5% 0',
-    // backgroundColor: 'red'
+    marginBottom: "4%"
   },
   rightDiv: {
-    flexGrow: 1,
-    flexShrink: 3,
-    margin: '0 auto 0 10%'
-    // backgroundColor: "green"
-    // display: 'flex',
-    // flexDirection: 'column'
+    flexFlow: 'row wrap',
+    // justifyContent: 'space-around',
+    // alignContent: "center",
+    // alignItems: "center",
+    justifyContent: "center"
+    // rowGap: '1000px'
   },
-  phone: {
-    width: '20%'
-    // backgroundColor: "green"
-  },
-  tablet: {
-    // flexBasis: '45%'
-    // width: '10%'
-    width: '30%'
-  },
-  laptop: {
-    // flexBasis: '45%'
-    width: '80%'
+  iResponsive: {
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto",
+    width: "40%"
   },
   restLogo: {
-    margin: "1rem 0.5rem",
     width: 140,
     [theme.breakpoints.up("sm")]: {
       width: 150
     },
     [theme.breakpoints.up("lg")]: {
-      width: "auto"
+      // width: "auto"
+      // width: 175
     },
-    maxHeight: 193.333
+    // maxHeight: 193.333,
+    border: '1px solid white'
   }
-  // wrapper: {
-  //   display: 'flex',
-  //   flexDirection: 'column',
-  //   justifyContent: 'center'
-  // }
 });
 
 export default injectSheet(styles)(Skills);
