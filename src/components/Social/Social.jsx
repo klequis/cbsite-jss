@@ -1,86 +1,60 @@
-import React from 'react'
-import injectSheet from 'react-jss'
-import iMeetup from 'media/logos/meetup-swarm.svg'
-import iGithub from 'media/logos/github-octocat.svg'
-import iFacebook from 'media/logos/facebook.svg'
-import iSlack from 'media/logos/slack.svg'
-import iBlog from 'media/blog.png'
+import React from "react";
+import injectSheet from "react-jss";
+import iGithub from "media/logos/github-octocat.svg";
+import iBlog from "media/blog.png";
+import iLinkedIn from "media/logos/linkedIn.png";
 
-const meetupURL = 'https://www.meetup.com/trivalleycoders/'
-const gitHubURL = 'https://github.com/klequis'
-const facebookURL = 'https://www.facebook.com/groups/free.code.camp.sanramon/'
+const linkedInURL = "https://www.linkedin.com/in/carlbecker/";
+const gitHubURL = "https://github.com/klequis";
+// const facebookURL = "https://www.facebook.com/groups/free.code.camp.sanramon/";
 const blogURL = "https://klequis.io/";
 
 const Footer = ({ classes }) => {
   return (
     <div>
       <div className={classes.inner}>
-        <div className={classes.links}>
-          <div className={classes.linkRow}>
-            <a href={meetupURL}>
-              <img src={iMeetup} className={classes.logo} alt="meetup logo" />
-            </a>
-            <a href={gitHubURL}>
-              <img
-                src={iGithub}
-                className={classes.logo}
-                alt="klequis' github"
-              />
-            </a>
-          </div>
-          <div className={classes.linkRow}>
-            {/* <a href={facebookURL}>
+        <a href={gitHubURL}>
+          <img src={iGithub} className={classes.logo} alt="klequis' github" />
+        </a>
+
+        {/* <a href={facebookURL}>
               <img
                 src={iFacebook}
                 className={classes.logo}
                 alt="tri valley coders facebook"
               />
             </a> */}
-            <a href={blogURL}>
-              <img
-                src={iBlog}
-                className={classes.logo}
-                alt="tri valley coders slack"
-              />
-            </a>
-          </div>
-        </div>
+        <a href={blogURL}>
+          <img
+            src={iBlog}
+            className={classes.logo}
+            alt="tri valley coders slack"
+          />
+        </a>
+        <a href={linkedInURL}>
+          <img
+            src={iLinkedIn}
+            className={classes.logo}
+            alt="tri valley coders slack"
+          />
+        </a>
       </div>
     </div>
   );
-}
+};
 
 const styles = theme => ({
   inner: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
     maxWidth: 251,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    // padding: '3rem 0',
-    display: 'flex',
-    flexDirection: 'column',
-    // backgroundColor: 'purple'
-  },
-  links: {
-    display: 'flex',
-    flexDirection: 'column',
-    [theme.breakpoints.up(500)]: {
-      flexDirection: 'row',
-    },
-  },
-  linkRow: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    // eslint-disable-next-line
-    justifyContent: 'space-evenly',
-    width: '100%',
-    // marginBottom: '3rem',
-    [theme.breakpoints.up(500)]: {
-      justifyContent: 'space-around',
-    }
+    marginLeft: "auto",
+    marginRight: "auto"
   },
   logo: {
-    maxHeight: 30,
-  },
-})
+    maxHeight: 30
+  }
+});
 
-export default injectSheet(styles)(Footer)
+export default injectSheet(styles)(Footer);
