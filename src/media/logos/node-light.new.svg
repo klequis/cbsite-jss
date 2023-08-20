@@ -3,8 +3,8 @@
 
 <svg
    width="172"
-   height="45.883121"
-   viewBox="0 0 172 45.88312"
+   height="45"
+   viewBox="0 0 172 44.999999"
    version="1.1"
    id="svg1717"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
@@ -229,11 +229,11 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6"
-     inkscape:cx="75.982143"
+     inkscape:cx="76.071429"
      inkscape:cy="12.5"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      showborder="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -269,6 +269,22 @@
        orientation="1,0"
        id="guide1933"
        inkscape:locked="false" />
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="0.99999998"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata1714">
@@ -287,7 +303,7 @@
      id="layer1"
      transform="translate(-1.0718819,-1077.4371)">
     <g
-       transform="matrix(1.2759015,0,0,1.2759015,-42.504979,1075.2702)"
+       transform="matrix(1.2759015,0,0,1.3670373,-50.853591,1072.8326)"
        id="g1051">
       <path
          style="fill:#539e43;stroke:none;stroke-width:0.176932;stroke-opacity:0.952862"

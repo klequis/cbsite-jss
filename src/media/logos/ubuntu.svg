@@ -2,20 +2,20 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="172"
-   height="45.876839"
-   viewBox="0 0 45.508333 12.138247"
+   height="45"
+   viewBox="0 0 45.508333 11.90625"
    version="1.1"
    id="svg1671"
-   inkscape:version="0.92.3 (unknown)"
-   sodipodi:docname="ubuntu.svg">
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="ubuntu.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs1665" />
   <sodipodi:namedview
@@ -26,24 +26,27 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="-46.283281"
-     inkscape:cy="40.167016"
+     inkscape:cx="-46.428571"
+     inkscape:cy="40.357143"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="1043"
+     inkscape:window-width="1720"
+     inkscape:window-height="1376"
      inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true"
      showborder="false"
-     units="px">
+     units="px"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
     <sodipodi:guide
        position="22.886458,28.067858"
        orientation="1,0"
@@ -51,6 +54,22 @@
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,0,255)" />
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="0.26458333"
+       spacingy="0.26458333"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata1668">
@@ -60,7 +79,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -70,34 +88,22 @@
      id="layer1"
      transform="translate(-87.134294,-137.47254)">
     <g
-       id="g827"
-       transform="translate(6.690179)">
-      <g
-         style="stroke:none;stroke-opacity:1"
-         transform="matrix(0.15541668,0,0,0.26471987,72.959362,87.906923)"
-         id="g1648">
-        <rect
-           style="fill:none;fill-opacity:0;stroke:none;stroke-width:0.32100001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           id="rect1755-5-1"
-           width="208.32918"
-           height="45.853184"
-           x="91.205986"
-           y="187.23798" />
-      </g>
+       id="g1"
+       transform="matrix(1.1378733,0,0,1.1378733,-20.234087,-19.819946)">
       <text
          id="text2609"
          y="145.20981"
-         x="99.861176"
-         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#dd4814;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="106.55135"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#dd4814;fill-opacity:1;stroke:none;stroke-width:0.264583"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#dd4814;fill-opacity:1;stroke-width:0.26458332"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#dd4814;fill-opacity:1;stroke-width:0.264583"
            y="145.20981"
-           x="99.861176"
+           x="106.55135"
            id="tspan2607"
            sodipodi:role="line">Ubuntu</tspan></text>
       <g
          style="stroke:none"
-         transform="matrix(0.04097533,0,0,0.04097533,87.657563,138.23374)"
+         transform="matrix(0.04097533,0,0,0.04097533,94.347742,138.23374)"
          id="g2700">
         <path
            style="fill:#dd4814;stroke:none"

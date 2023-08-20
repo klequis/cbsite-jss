@@ -9,7 +9,7 @@ import iBlog from "media/blog.png";
 const Title = ({ classes }) => {
   return (
     <Section background="blue">
-      <div>
+      <header>
         <Text
           variant="h1"
           align="center"
@@ -47,7 +47,7 @@ const Title = ({ classes }) => {
             />
           </a>
         </div>
-      </div>
+      </header>
     </Section>
   );
 };

@@ -18,13 +18,13 @@ const sectionStyle = (bgColor = bgColorWhite) => {
         boxShadow: "inset 0 1px 0 0 rgba(0, 0, 0, 0.15)",
         backgroundColor: "white",
         color: "black",
-        backgroundColor: 'red'
+        // backgroundColor: 'red'
       }
     : {
         boxShadow: "inset 0 1px 0 0 rgba(255, 255, 255, 0.075)",
         backgroundColor: "#005ca8",
         color: "white",
-        backgroundColor: 'red'
+        // backgroundColor: 'red'
       };
 };
 
@@ -35,7 +35,7 @@ const innerStyle = (flexDirection = "none") => {
     {
       maxWidth: 1180,
       margin: "auto",
-      backgroundColor: 'green'
+      // backgroundColor: 'green'
     },
     flex
   );
