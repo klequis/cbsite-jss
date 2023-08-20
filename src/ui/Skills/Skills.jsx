@@ -95,11 +95,11 @@ const styles = theme => ({
 
     [theme.breakpoints.up("sm")]: {
       gap: "1em",
-      backgroundColor: "red"
+      // backgroundColor: "red"
     },
     [theme.breakpoints.up("lg")]: {
       gap: "2em",
-      backgroundColor: "blue"
+      // backgroundColor: "blue"
     }
   },
   iResponsive: {
