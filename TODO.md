@@ -1,10 +1,13 @@
-## Prime
-- the skills section doesn't look good on mobile. As an alternative could put the devices across the top and then have the logos below. The change may be as easy as changing 'flexDirection'?
+
+
+
+
+
 
 ## Current
-- finalize logos in Software Developer
-- Remove "Software Developer" from header of logo section
-- repeat header logos in footer
+- Maybe, use contact/email but use klequis.io
+- responsive icons are too large
+- use Social in footer - maybe, but use only the same logos
 - remove email from footer
 - setup route 52
 

@@ -9,9 +9,9 @@ const gitHubURL = "https://github.com/klequis";
 // const facebookURL = "https://www.facebook.com/groups/free.code.camp.sanramon/";
 const blogURL = "https://klequis.io/";
 
-const Footer = ({ classes }) => {
+const Social = ({ classes }) => {
   return (
-    <div>
+    <div className={classes.outer}>
       <div className={classes.inner}>
         <a href={gitHubURL}>
           <img src={iGithub} className={classes.logo} alt="klequis' github" />
@@ -44,17 +44,24 @@ const Footer = ({ classes }) => {
 };
 
 const styles = theme => ({
+  outer: {
+    paddingTop: 0,
+    paddingBottom: 0,
+    marginTop: 0,
+    marginBottom: 0
+  },
   inner: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
     maxWidth: 251,
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
+    // backgroundColor: 'purple'
   },
   logo: {
-    maxHeight: 30
+    maxHeight: 40
   }
 });
 
-export default injectSheet(styles)(Footer);
+export default injectSheet(styles)(Social);

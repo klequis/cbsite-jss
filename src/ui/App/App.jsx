@@ -28,7 +28,7 @@ const styles = theme => ({
       [theme.breakpoints.up('lg')]: {
         fontSize: '16pt'
       },
-      backgroundColor: 'orange'
+      // backgroundColor: 'orange'
     },
     body: {
       margin: 0,
