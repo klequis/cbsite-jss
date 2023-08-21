@@ -11,12 +11,12 @@ import ThePast from 'ui/ThePast'
 import Footer from 'ui/Footer'
 import Title from 'ui/Title'
 // import Try from 'ui/try'
-import Breakpoints from 'components/Breakpoint'
+// import Breakpoints from 'components/Breakpoint'
 
 const Home = () => {
   return (
     <div>
-      <Breakpoints />
+      {/* <Breakpoints /> */}
       <Title />
       {/* <Try /> */}
       <Skills />
