@@ -26,11 +26,6 @@ import iWordpress from "media/logos/wordpress.svg";
 // 
 import iResponsive from 'media/responsive.svg'
 
-const logo = {
-  width: 150,
-  // border: "1px solid black"
-};
-
 const Skills = props => {
   const { classes } = props;
   return (
@@ -40,39 +35,39 @@ const Skills = props => {
       gap="1em"
       title="Software Developer"
     >
-      <div className={classes.leftDiv}>
+      <div className={classes.topDiv}>
         <img
           src={iResponsive}
           className={classes.iResponsive}
           alt="images of "
         />
       </div>
-      <div className={classes.rightDiv}>
+      <div className={classes.bottomDiv}>
         <div className={classes.rightInnerDiv}>
-          <img src={iAWS} style={logo} alt="aws javascript sdk logo" />
-          <img src={iBootstrap} style={logo} alt="bootstrap logo" />
-          <img src={iDrupal} style={logo} alt="drupal logo" />
-          <img src={iExpress} style={logo} alt="Express JS logo" />
-          <img src={iJS} style={logo} alt="javascript logo" />
-          <img src={iMUI} style={logo} alt="material ui logo" />
-          <img src={iMocha} style={logo} alt="mocha logo" />
-          <img src={iMongoDB} style={logo} alt="mongoDB logo" />
-          <img src={iMySql} style={logo} alt="material ui logo" />
-          <img src={iNextJS} style={logo} alt="next js logo" />
-          <img src={iNode} style={logo} alt="node js logo" />
-          <img src={iRamda} style={logo} alt="ramda logo" />
-          <img src={iReact} style={logo} alt="react js logo" />
-          <img src={iRedux} style={logo} alt="redux logo" />
-          <img src={iRest} style={logo} alt="rest api logo" />
+          <img src={iAWS} className={classes.logo} alt="aws javascript sdk logo" />
+          <img src={iBootstrap} className={classes.logo} alt="bootstrap logo" />
+          <img src={iDrupal} className={classes.logo} alt="drupal logo" />
+          <img src={iExpress} className={classes.logo} alt="Express JS logo" />
+          <img src={iJS} className={classes.logo} alt="javascript logo" />
+          <img src={iMUI} className={classes.logo} alt="material ui logo" />
+          <img src={iMocha} className={classes.logo} alt="mocha logo" />
+          <img src={iMongoDB} className={classes.logo} alt="mongoDB logo" />
+          <img src={iMySql} className={classes.logo} alt="material ui logo" />
+          <img src={iNextJS} className={classes.logo} alt="next js logo" />
+          <img src={iNode} className={classes.logo} alt="node js logo" />
+          <img src={iRamda} className={classes.logo} alt="ramda logo" />
+          <img src={iReact} className={classes.logo} alt="react js logo" />
+          <img src={iRedux} className={classes.logo} alt="redux logo" />
+          <img src={iRest} className={classes.logo} alt="rest api logo" />
           <img
             src={iStyledComponents}
-            style={logo}
+            className={classes.logo}
             alt="styled components logo"
           />
-          <img src={iTravis} style={logo} alt="travis ci logo" />
-          <img src={iUbuntu} style={logo} alt="ubuntu logo" />
-          <img src={iWebpack} style={logo} alt="webpack logo" />
-          <img src={iWordpress} style={logo} alt="wordpress logo" />
+          <img src={iTravis} className={classes.logo} alt="travis ci logo" />
+          <img src={iUbuntu} className={classes.logo} alt="ubuntu logo" />
+          <img src={iWebpack} className={classes.logo} alt="webpack logo" />
+          <img src={iWordpress} className={classes.logo} alt="wordpress logo" />
         </div>
       </div>
     </Section>
@@ -81,25 +76,38 @@ const Skills = props => {
 
 
 const styles = theme => ({
-  leftDiv: {
-    marginBottom: "4%"
+  topDiv: {
+    marginBottom: "7%",
+    [theme.breakpoints.up("sm")]: {},
+    [theme.breakpoints.up("lg")]: {}
   },
-  rightDiv: {
+  bottomDiv: {
     margin: "0 auto 0 auto",
     width: "90%"
+  },
+  logo: {
+    width: "40%",
+    // background: "gray",
+    [theme.breakpoints.up("md")]: {
+      maxWidth: 170
+    },
+    [theme.breakpoints.up("sm")]: {
+      // width: 5,
+    },
+    [theme.breakpoints.up("lg")]: {}
   },
   rightInnerDiv: {
     display: "flex",
     flexFlow: "row wrap",
     justifyContent: "space-around",
-
+    gap: "0.5em",
     [theme.breakpoints.up("sm")]: {
-      gap: "1em",
-      // backgroundColor: "red"
+      gap: "1em"
+      // background: "purple"
     },
     [theme.breakpoints.up("lg")]: {
-      gap: "2em",
-      // backgroundColor: "blue"
+      gap: "2em"
+      // background: "orange"
     }
   },
   iResponsive: {
